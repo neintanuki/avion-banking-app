@@ -1,0 +1,17 @@
+.sign-in {
+    display: flex;
+}
+
+.sign-in > * {
+    min-height: 100vh;
+}
+
+.sign-in .left-side {
+    width: 40%;
+    background-color: #111111;
+}
+
+.sign-in .right-side {
+    width: 60%;
+    padding: 4rem;
+}

@@ -1,11 +1,13 @@
 import Route from './router/Route';
 import Link from './router/Link';
 
+import SignIn from './pages/SignIn';
+
 function App() {
   return (
-    <div className="App">
-      
-    </div>
+    <>
+    <Route path="/signin">{SignIn}</Route>
+    </>
   );
 }
 
