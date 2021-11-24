@@ -1,6 +1,5 @@
 import './styles/SignIn.css';
 
-
 export default function SignIn() {
     return (
         <div className="sign-in">
@@ -19,10 +18,10 @@ export default function SignIn() {
 
                     <div className="form-control">
                         <label htmlFor="password" className="form-label">Password</label>
-                        <input type="text" name="password" className="form-input"/>
+                        <input type="password" name="password" className="form-input"/>
                     </div>
 
-                    <button>Sign In</button>
+                    <button className="btn-submit">Sign In</button>
 
                 </form>
             </div>

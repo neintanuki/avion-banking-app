@@ -19,5 +19,5 @@ export default function Route({ path, children }) {
         }
     }, [])
 
-    return currentPath === path ? children() : null;
+    return currentPath === path ? children : null;
 }

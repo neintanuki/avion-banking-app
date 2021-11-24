@@ -4,9 +4,10 @@ import Link from './router/Link';
 import SignIn from './pages/SignIn';
 
 function App() {
+
   return (
     <>
-    <Route path="/signin">{SignIn}</Route>
+    <Route path="/signin"><SignIn /></Route>
     </>
   );
 }

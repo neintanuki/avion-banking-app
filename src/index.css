@@ -1,1 +1,22 @@
-/* empty global styles */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.form-control {
+    margin: 2rem 0;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: .4rem;
+}
+
+.form-input {
+    display: block;
+    width: 100%;
+    padding: .8rem;
+}
