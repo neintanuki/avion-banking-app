@@ -9,6 +9,10 @@
 .sign-in .left-side {
     width: 40%;
     background-color: #111111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 0;
 }
 
 .sign-in .right-side {
@@ -24,9 +28,23 @@
     border: none;
     border-radius: 30px;
     cursor: pointer;
+    transition: transform 0.6s ease;
+}
+
+.sign-in .btn-submit:hover {
+    transform: scale(1.04);
+}
+
+.sign-in .left-side img {
+    width: 70%;
 }
 
 @media all and (max-width: 625px) {
+    .sign-in .title,
+    .sign-in .subtitle {
+        text-align: center;
+    }
+
     .sign-in .left-side {
         display: none;
     }
@@ -40,5 +58,6 @@
     .sign-in .btn-submit {
         background-color: #ffffff;
         color: #111111;
+        width: 100%;
     }
 }
