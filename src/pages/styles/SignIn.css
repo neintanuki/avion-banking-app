@@ -25,3 +25,20 @@
     border-radius: 30px;
     cursor: pointer;
 }
+
+@media all and (max-width: 625px) {
+    .sign-in .left-side {
+        display: none;
+    }
+
+    .sign-in .right-side {
+        width: 100%;
+        background-color: #111111;
+        color: #ffffff;
+    }
+
+    .sign-in .btn-submit {
+        background-color: #ffffff;
+        color: #111111;
+    }
+}
