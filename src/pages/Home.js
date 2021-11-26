@@ -1,22 +1,25 @@
+import './styles/Home.css';
+
+import piggyBank from '../assets/piggy-bank-and-plants.svg';
 
 export default function Home() {
     return (
         <main className="home">
             <header>
-                <div className="containe">
-                    <span>Logo</span>
+                <div className="container">
+                    <span className="logo">Logo</span>
 
                     <nav>
                         <a href="">Home</a>
                         <a href="">About</a>
                         <a href="">Features</a>
+                        <a href="" className="sign-in-cta">Sign In</a>
                     </nav>
 
-                    <a href="" className="sign-in-cta">Sign In</a>
                 </div>
             </header>
 
-            <section className="hero">
+            <section id="home" className="two-col">
                 <div className="container">
                     <div className="left-side">
                         <h1 className="title">Manage your bank account</h1>
@@ -24,12 +27,12 @@ export default function Home() {
                     </div>
 
                     <div className="right-side">
-                        {/* illustration */}
+                        <img src={piggyBank} alt="piggy-bank"/>
                     </div>
                 </div>
             </section>
 
-            <section id="about">
+            <section id="about" className="two-col">
                 <div className="left-side">
                     {/* illustration */}
                 </div>
