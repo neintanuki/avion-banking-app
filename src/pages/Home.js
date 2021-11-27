@@ -1,6 +1,9 @@
 import './styles/Home.css';
 
 import piggyBank from '../assets/piggy-bank-and-plants.svg';
+import dashboard from '../assets/dashboard.svg';
+import ui from '../assets/ui.svg';
+import onlineBanking from '../assets/online-banking.svg';
 
 export default function Home() {
     return (
@@ -43,25 +46,28 @@ export default function Home() {
             </section>
 
             <section id="features">
-                <h1 className="title">Features</h1>
-                <p className="subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate dolores laborum sunt similique in exercitationem neque tempore consectetur sapiente perferendis!</p>
+                <div className="container">
+                    <h1 className="title">Features</h1>
+                    <p className="subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate dolores laborum sunt similique in exercitationem neque tempore consectetur sapiente perferendis!</p>
 
-                <div className="feature-list">
-                    <div className="feature">
-                        {/* illustration */}
-                        <h2 className="title">Feature</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam aperiam voluptatum quidem a omnis culpa autem fuga amet, in harum.</p>
+                    <div className="feature-list">
+                        <div className="feature">
+                            <img src={onlineBanking} alt="online-banking-img"/>
+                            <h2 className="title">Banking made easy</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam aperiam voluptatum quidem a omnis culpa autem fuga amet, in harum.</p>
+                        </div>
+                        <div className="feature">
+                            <img src={dashboard} alt="dashboard-img"/>
+                            <h2 className="title">Dashboard</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam aperiam voluptatum quidem a omnis culpa autem fuga amet, in harum.</p>
+                        </div>
+                        <div className="feature">
+                            <img src={ui} alt="ui-img"/>
+                            <h2 className="title">Friendly UI</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam aperiam voluptatum quidem a omnis culpa autem fuga amet, in harum.</p>
+                        </div>
                     </div>
-                    <div className="feature">
-                        {/* illustration */}
-                        <h2 className="title">Feature</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam aperiam voluptatum quidem a omnis culpa autem fuga amet, in harum.</p>
-                    </div>
-                    <div className="feature">
-                        {/* illustration */}
-                        <h2 className="title">Feature</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam aperiam voluptatum quidem a omnis culpa autem fuga amet, in harum.</p>
-                    </div>
+
                 </div>
             </section>
         </main>
