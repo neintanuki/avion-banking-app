@@ -6,7 +6,7 @@
 
 .home .title {
     font-size: 2rem;
-    margin: 1rem 0;
+    margin: 0;
 }
 
 header {
@@ -75,16 +75,33 @@ section .right-side {
 
 #features {
     text-align: center;
+    background-color: #F1E8B8;
+}
+
+#features .feature {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 2rem;
+    /* background: #F1E8B8; */
+}
+
+#features .feature-header {
+    height: 140px;
+}
+
+#features .feature-body {
+    flex: 1 1 auto;
 }
 
 #features .feature-list {
-    max-width: 800px;
-    margin: auto;
+    max-width: 900px;
     display: flex;
-
+    background-color: aliceblue;
 }
 
 #features img {
     display: block;
-    width: 100%;
+    height: 100%;
+    margin: auto;
 }

@@ -52,19 +52,31 @@ export default function Home() {
 
                     <div className="feature-list">
                         <div className="feature">
-                            <img src={onlineBanking} alt="online-banking-img"/>
-                            <h2 className="title">Banking made easy</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam aperiam voluptatum quidem a omnis culpa autem fuga amet, in harum.</p>
+                            <div className="feature-header">
+                                <img src={onlineBanking} alt="online-banking-img"/>
+                            </div>
+                            <div className="feature-body">
+                                <h2 className="title">Banking made easy</h2>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam aperiam voluptatum quidem a omnis culpa autem fuga amet, in harum.</p>
+                            </div>
                         </div>
                         <div className="feature">
-                            <img src={dashboard} alt="dashboard-img"/>
-                            <h2 className="title">Dashboard</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam aperiam voluptatum quidem a omnis culpa autem fuga amet, in harum.</p>
+                            <div className="feature-header">
+                                <img src={dashboard} alt="dashboard-img"/>
+                            </div>
+                            <div className="feature-body">
+                                <h2 className="title">Dashboard</h2>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam aperiam voluptatum quidem a omnis culpa autem fuga amet, in harum.</p>
+                            </div>
                         </div>
                         <div className="feature">
-                            <img src={ui} alt="ui-img"/>
-                            <h2 className="title">Friendly UI</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam aperiam voluptatum quidem a omnis culpa autem fuga amet, in harum.</p>
+                            <div className="feature-header">
+                                <img src={ui} alt="ui-img"/>
+                            </div>
+                            <div className="feature-body">
+                                <h2 className="title">Friendly UI</h2>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam aperiam voluptatum quidem a omnis culpa autem fuga amet, in harum.</p>
+                            </div>
                         </div>
                     </div>
 
