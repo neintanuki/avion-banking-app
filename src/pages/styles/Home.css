@@ -30,7 +30,6 @@ nav {
 nav a {
     /* display: inline-block; */
     margin: 0 1rem;
-    text-decoration: none;
     color: #111111;
 }
 
@@ -75,14 +74,16 @@ section .right-side {
 
 #features {
     text-align: center;
-    background-color: #F1E8B8;
 }
 
 #features .feature {
+    position: relative;
     display: flex;
     flex-direction: column;
     flex: 1;
     padding: 2rem;
+    text-align: justify;
+    text-align-last: center;
     /* background: #F1E8B8; */
 }
 
@@ -96,12 +97,48 @@ section .right-side {
 
 #features .feature-list {
     max-width: 900px;
+    margin: 4rem auto;
     display: flex;
-    background-color: aliceblue;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+#features .feature:nth-child(2)::before,
+#features .feature:nth-child(2)::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2px;
+    height: 60%;
+    background: black;
+}
+
+#features .feature:nth-child(2)::before {
+    left: 0;
+}
+
+#features .feature:nth-child(2)::after {
+    right: 0;
 }
 
 #features img {
     display: block;
     height: 100%;
     margin: auto;
+}
+
+footer .container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background-color: #d05353;
+    padding: 2rem 0;
+}
+/* 
+footer div {
+    background: red;
+} */
+
+footer a {
+    display: block;
+    margin: 1rem 0;
 }

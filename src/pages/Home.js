@@ -82,6 +82,35 @@ export default function Home() {
 
                 </div>
             </section>
+
+            <footer>
+                <div className="container">
+
+                    <div className="copyright">
+                        {/* logo */}
+                        <span className="copyright-text">All Rights Reserved 2021</span>
+                    </div>
+
+                    <div className="footer-links">
+                        <h1 className="title">Main Navigation</h1>
+                        <a href="">Home</a>
+                        <a href="">Dashboard</a>
+                        <a href="">Pricing</a>
+                    </div>
+
+                    <div className="footer-links">
+                        <h1 className="title">Company</h1>
+                        <a href="">About Us</a>
+                        <a href="">Blog</a>
+                        <a href="">Newsletter</a>
+                    </div>
+
+                    <div className="social-links">
+                        <h1 className="title">Social</h1>
+                        
+                    </div>
+                </div>
+            </footer>
         </main>
     )
 }
