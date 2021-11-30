@@ -25,7 +25,7 @@ export default function Home() {
             <section id="home" className="two-col">
                 <div className="container">
                     <div className="left-side">
-                        <h1 className="title">Manage your bank account</h1>
+                        <h1 className="title f-lg">Manage your bank account</h1>
                         <p className="subtitle">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis dolorum soluta consectetur saepe alias fuga enim quia possimus! Commodi, magni.</p>
                     </div>
 
@@ -40,14 +40,14 @@ export default function Home() {
                     {/* illustration */}
                 </div>
                 <div className="right-side">
-                    <h1 className="title">About Us</h1>
+                    <h1 className="title f-lg">About Us</h1>
                     <p className="subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione rerum officiis, repellendus, eveniet consectetur pariatur sed possimus temporibus assumenda error commodi ipsam maxime suscipit nobis hic? Modi, sapiente? Voluptate quo eaque voluptates laborum sequi mollitia aut, officiis dolor placeat perspiciatis? Eveniet possimus similique laborum qui minus explicabo voluptatibus, eius consequatur.</p>
                 </div>
             </section>
 
             <section id="features">
                 <div className="container">
-                    <h1 className="title">Features</h1>
+                    <h1 className="title f-md">Features</h1>
                     <p className="subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate dolores laborum sunt similique in exercitationem neque tempore consectetur sapiente perferendis!</p>
 
                     <div className="feature-list">
@@ -92,21 +92,21 @@ export default function Home() {
                     </div>
 
                     <div className="footer-links">
-                        <h1 className="title">Main Navigation</h1>
+                        <h1 className="title f-sm">Main Navigation</h1>
                         <a href="">Home</a>
                         <a href="">Dashboard</a>
                         <a href="">Pricing</a>
                     </div>
 
                     <div className="footer-links">
-                        <h1 className="title">Company</h1>
+                        <h1 className="title f-sm">Company</h1>
                         <a href="">About Us</a>
                         <a href="">Blog</a>
                         <a href="">Newsletter</a>
                     </div>
 
                     <div className="social-links">
-                        <h1 className="title">Social</h1>
+                        <h1 className="title f-sm">Social</h1>
                         
                     </div>
                 </div>
