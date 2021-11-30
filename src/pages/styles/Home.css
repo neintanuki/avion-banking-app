@@ -5,7 +5,6 @@
 }
 
 .home .title {
-    font-size: 2rem;
     margin: 0;
 }
 
@@ -88,11 +87,22 @@ section .right-side {
 }
 
 #features .feature-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 140px;
 }
 
 #features .feature-body {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     flex: 1 1 auto;
+}
+
+#features .title {
+    text-align: center;
+    margin: 1rem 0 0 0;
 }
 
 #features .feature-list {
@@ -123,8 +133,7 @@ section .right-side {
 
 #features img {
     display: block;
-    height: 100%;
-    margin: auto;
+    height: 70%;
 }
 
 footer .container {

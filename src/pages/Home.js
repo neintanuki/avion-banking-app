@@ -56,7 +56,7 @@ export default function Home() {
                                 <img src={onlineBanking} alt="online-banking-img"/>
                             </div>
                             <div className="feature-body">
-                                <h2 className="title">Banking made easy</h2>
+                                <h2 className="title f-sm">Banking made easy</h2>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam aperiam voluptatum quidem a omnis culpa autem fuga amet, in harum.</p>
                             </div>
                         </div>
@@ -65,7 +65,7 @@ export default function Home() {
                                 <img src={dashboard} alt="dashboard-img"/>
                             </div>
                             <div className="feature-body">
-                                <h2 className="title">Dashboard</h2>
+                                <h2 className="title f-sm">Dashboard</h2>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam aperiam voluptatum quidem a omnis culpa autem fuga amet, in harum.</p>
                             </div>
                         </div>
@@ -74,7 +74,7 @@ export default function Home() {
                                 <img src={ui} alt="ui-img"/>
                             </div>
                             <div className="feature-body">
-                                <h2 className="title">Friendly UI</h2>
+                                <h2 className="title f-sm">Friendly UI</h2>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam aperiam voluptatum quidem a omnis culpa autem fuga amet, in harum.</p>
                             </div>
                         </div>
