@@ -41,3 +41,7 @@ a {
 .f-lg {
     font-size: 3rem;
 }
+
+.text-content {
+    max-width: 600px;
+}

@@ -44,15 +44,19 @@ export default function Home() {
                     {/* illustration */}
                 </div>
                 <div className="right-side">
-                    <h1 className="title f-lg">About Us</h1>
-                    <p className="subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione rerum officiis, repellendus, eveniet consectetur pariatur sed possimus temporibus assumenda error commodi ipsam maxime suscipit nobis hic? Modi, sapiente? Voluptate quo eaque voluptates laborum sequi mollitia aut, officiis dolor placeat perspiciatis? Eveniet possimus similique laborum qui minus explicabo voluptatibus, eius consequatur.</p>
+                    <div className="text-content">
+                        <h1 className="title f-lg">About Us</h1>
+                        <p className="subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione rerum officiis, repellendus, eveniet consectetur pariatur sed possimus temporibus assumenda error commodi ipsam maxime suscipit nobis hic? Modi, sapiente? Voluptate quo eaque voluptates laborum sequi mollitia aut, officiis dolor placeat perspiciatis? Eveniet possimus similique laborum qui minus explicabo voluptatibus, eius consequatur.</p>
+                    </div>
                 </div>
             </section>
 
             <section id="features">
                 <div className="container">
-                    <h1 className="title f-md">Features</h1>
-                    <p className="subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate dolores laborum sunt similique in exercitationem neque tempore consectetur sapiente perferendis!</p>
+                    <div className="text-content">
+                        <h1 className="title f-md">Features</h1>
+                        <p className="subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate dolores laborum sunt similique in exercitationem neque tempore consectetur sapiente perferendis!</p>
+                    </div>
 
                     <div className="feature-list">
                         <div className="feature">
@@ -97,16 +101,16 @@ export default function Home() {
 
                     <div className="footer-links">
                         <h1 className="title f-sm">Main Navigation</h1>
-                        <a href="">Home</a>
-                        <a href="">Dashboard</a>
-                        <a href="">Pricing</a>
+                        <a href="#home">Home</a>
+                        <a href="#">Dashboard</a>
+                        <a href="#">Pricing</a>
                     </div>
 
                     <div className="footer-links">
                         <h1 className="title f-sm">Company</h1>
-                        <a href="">About Us</a>
-                        <a href="">Blog</a>
-                        <a href="">Newsletter</a>
+                        <a href="#about">About Us</a>
+                        <a href="#">Blog</a>
+                        <a href="#">Newsletter</a>
                     </div>
 
                     <div className="social-links">

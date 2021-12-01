@@ -2,15 +2,29 @@
 .home .container {
     max-width: 1200px;
     margin: auto;
+    /* padding: 0 2rem; */
 }
 
 .home .title {
     margin: 0;
 }
 
+section .title {
+    color: #d05353;
+}
+
+section .container {
+    padding: 0 2rem;
+}
+
 header {
+    width: 100%;
     padding: 1.4rem;
     background-color: #F9E784;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
 }
 
 header .container {
@@ -70,10 +84,17 @@ section .right-side {
     background: url(../../assets/geometrica.png);
 }
 
+#about .right-side {
+    padding-right: 2rem;
+}
 
 #features {
     text-align: center;
     padding: 2rem;
+}
+
+#features .text-content {
+    margin: auto;
 }
 
 #features .feature {
@@ -144,7 +165,8 @@ footer {
 footer .container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    padding: 2rem 0;
+    column-gap: 2rem;
+    padding: 2rem;
 }
 
 footer a {
