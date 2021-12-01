@@ -73,6 +73,7 @@ section .right-side {
 
 #features {
     text-align: center;
+    padding: 2rem;
 }
 
 #features .feature {
@@ -81,8 +82,8 @@ section .right-side {
     flex-direction: column;
     flex: 1;
     padding: 2rem;
-    text-align: justify;
-    text-align-last: center;
+    text-align: center;
+    /* text-align-last: center; */
     /* background: #F1E8B8; */
 }
 
@@ -101,7 +102,7 @@ section .right-side {
 }
 
 #features .title {
-    text-align: center;
+    /* text-align: center; */
     margin: 1rem 0 0 0;
 }
 
@@ -136,18 +137,37 @@ section .right-side {
     height: 70%;
 }
 
+footer {
+    background-color: #d05353;
+}
+
 footer .container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    background-color: #d05353;
     padding: 2rem 0;
 }
-/* 
-footer div {
-    background: red;
-} */
 
 footer a {
     display: block;
     margin: 1rem 0;
+    color: #ffffff;
+}
+
+footer .copyright {
+    color: #ffffff;
+}
+
+footer .social-btn-group {
+    display: flex;
+}
+
+footer .social-link {
+    border: solid 2px #ffffff;
+    border-radius: 32px;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: .6rem;
 }

@@ -1,5 +1,9 @@
 import './styles/Home.css';
 
+import facebook from '../assets/facebook.svg';
+import twitter from '../assets/twitter.svg';
+import instagram from '../assets/instagram.svg';
+
 import piggyBank from '../assets/piggy-bank-and-plants.svg';
 import dashboard from '../assets/dashboard.svg';
 import ui from '../assets/ui.svg';
@@ -13,10 +17,10 @@ export default function Home() {
                     <span className="logo">Logo</span>
 
                     <nav>
-                        <a href="">Home</a>
-                        <a href="">About</a>
-                        <a href="">Features</a>
-                        <a href="" className="sign-in-cta">Sign In</a>
+                        <a href="#home">Home</a>
+                        <a href="#about">About</a>
+                        <a href="#features">Features</a>
+                        <a href="/signin" className="sign-in-cta">Sign In</a>
                     </nav>
 
                 </div>
@@ -107,7 +111,17 @@ export default function Home() {
 
                     <div className="social-links">
                         <h1 className="title f-sm">Social</h1>
-                        
+                        <div className="social-btn-group">
+                            <a href="#" className="social-link">
+                                <img src={facebook} alt="facebook"/>
+                            </a>
+                            <a href="#" className="social-link">
+                                <img src={twitter} alt="twitter"/>
+                            </a>
+                            <a href="#" className="social-link">
+                                <img src={instagram} alt="instagram"/>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </footer>
