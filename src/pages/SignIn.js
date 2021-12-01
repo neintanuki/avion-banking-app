@@ -1,6 +1,10 @@
 import { useState } from 'react';
 import './styles/SignIn.css';
 
+import banking3DIllustration from '../assets/3d-stripy.png';
+
+import ErrorMsg from '../components/ErrorMsg';
+
 export default function SignIn({ setIsSignedIn }) {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
@@ -52,7 +56,7 @@ export default function SignIn({ setIsSignedIn }) {
     return (
         <div className="sign-in">
             <div className="left-side">
-
+                <img src={banking3DIllustration} alt="banking-3d-illustration"/>
             </div>
             <div className="right-side">
                 <button onClick={test}>Click me</button>
@@ -63,13 +67,13 @@ export default function SignIn({ setIsSignedIn }) {
                     <div className="form-control">
                         <label htmlFor="username" className="form-label">Username</label>
                         <input type="text" name="username" className="form-input" value={username} onChange={e => setUsername(e.target.value)} required />
-                        {errors.username}
+                        <ErrorMsg msg={errors.username} />
                     </div>
 
                     <div className="form-control">
                         <label htmlFor="password" className="form-label">Password</label>
-                        <input type="password" name="password" className="form-input" value={password} onChange={e => setPassword(e.target.value)}/>
-                        {errors.password}
+                        <input type="password" name="password" className="form-input" value={password} onChange={e => setPassword(e.target.value)} required/>
+                        <ErrorMsg msg={errors.password} />
                     </div>
 
                     <button className="btn-submit">Sign In</button>
