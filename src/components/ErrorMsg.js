@@ -1,5 +1,3 @@
-import "./styles/ErrorMsg.css";
-
 export default function ErrorMsg({ msg }) {
     if (msg) {
         return (
