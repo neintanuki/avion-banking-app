@@ -13,7 +13,7 @@ export default function Client() {
   // const userDB = JSON.parse(localStorage.getItem("avion-banking-app"));
 
   return (
-    <div className="client" css={CSS}>
+    <div className="client">
       <h2>Client Database</h2>
       <div className="table">
         <table>

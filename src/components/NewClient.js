@@ -19,7 +19,7 @@ export default function NewClient() {
   }
 
   return (
-    <div className="newclient" css={CSS}>
+    <div className="newclient">
       <h2>New Client</h2>
       <form onSubmit={submitHandler} className="form">
         <div className="form-item">

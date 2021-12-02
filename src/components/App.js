@@ -1,5 +1,5 @@
 import React from "react";
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 import { Routes, Route, NavLink } from "react-router-dom";
 import { Nav } from "react-bootstrap";
 
@@ -10,7 +10,7 @@ import Client from "./Client";
 import NewClient from "./NewClient";
 import Transact from "./Transact";
 import TransactionHistory from "./TransactionHistory";
-// import SignIn from "./SignIn";
+import SignIn from "./SignIn";
 import Footer from "./Footer";
 
 
@@ -18,7 +18,7 @@ function App() {
   return (
     <div className="App">
       <div className="navbar">
-        <div className="innver-navbar">
+        <div className="inner-navbar">
           <img className="bnm-logo" src={logo} alt="bnm logo" /><span className="bnm-wordmark">BNM</span>
         </div>
         <div className="navmenu">
@@ -41,7 +41,7 @@ function App() {
         <Route path="newclient" element={<NewClient />} />
         <Route path="transact" element={<Transact />} />
         <Route path="transactionhistory" element={<TransactionHistory />} />
-        {/* <Route path="signin" element={<SignIn />} /> */}
+        <Route path="signin" element={<SignIn />} />
       </Routes>
 
       <Dashboard />
@@ -49,7 +49,7 @@ function App() {
       <NewClient />
       <Transact />
       <TransactionHistory />
-      {/* <SignIn /> */}
+      <SignIn />
       <Footer />
     </div>
   );
