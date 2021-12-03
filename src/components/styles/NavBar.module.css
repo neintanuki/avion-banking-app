@@ -1,0 +1,22 @@
+.navbar {
+    background-color: rgba(0, 0, 0, 0.85);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+}
+
+.navLink {
+    margin: 10px;
+    text-decoration: none;
+    color: white;
+}
+
+.navLink:hover {
+    color: gold;
+}
+
+.active {
+    color: gold;
+}

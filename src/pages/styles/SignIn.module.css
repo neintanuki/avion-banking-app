@@ -1,12 +1,12 @@
-.sign-in {
+.signIn {
     display: flex;
 }
 
-.sign-in > * {
+.signIn > * {
     min-height: 100vh;
 }
 
-.sign-in .left-side {
+.signIn .leftSide {
     width: 40%;
     background-color: #111111;
     display: flex;
@@ -15,12 +15,12 @@
     flex-grow: 0;
 }
 
-.sign-in .right-side {
+.signIn .rightSide {
     width: 60%;
     padding: 4rem;
 }
 
-.sign-in .btn-submit {
+.signIn .btnSubmit {
     color: white;
     background-color: #111111;
     font-weight: 700;
@@ -31,31 +31,31 @@
     transition: transform 0.6s ease;
 }
 
-.sign-in .btn-submit:hover {
+.signIn .btnSubmit:hover {
     transform: scale(1.04);
 }
 
-.sign-in .left-side img {
+.signIn .leftSide img {
     width: 70%;
 }
 
 @media all and (max-width: 625px) {
-    .sign-in .title,
-    .sign-in .subtitle {
+    .signIn .title,
+    .signIn .subtitle {
         text-align: center;
     }
 
-    .sign-in .left-side {
+    .signIn .leftSide {
         display: none;
     }
 
-    .sign-in .right-side {
+    .signIn .rightSide {
         width: 100%;
         background-color: #111111;
         color: #ffffff;
     }
 
-    .sign-in .btn-submit {
+    .signIn .btnSubmit {
         background-color: #ffffff;
         color: #111111;
         width: 100%;

@@ -45,3 +45,25 @@ a {
 .text-content {
     max-width: 600px;
 }
+
+.bnm-logo {
+    filter: invert(100%);
+    width: 30px;
+    height: 30px;
+}
+
+.bnm-wordmark {
+    font-weight: 600;
+    vertical-align: middle;
+    padding-left: 5px;
+    color: white;
+}
+
+.client, .newclient, .transact, .transactionhistory, .signin {
+    width: 50vw;
+    height: 100vh;
+    text-align: justify;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+}
