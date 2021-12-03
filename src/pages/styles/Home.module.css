@@ -159,32 +159,32 @@ section .rightSide {
     height: 70%;
 }
 
-footer {
+.footer {
     background-color: #d05353;
 }
 
-footer .container {
+.footer .container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     column-gap: 2rem;
     padding: 2rem;
 }
 
-footer a {
+.footer a {
     display: block;
     margin: 1rem 0;
     color: #ffffff;
 }
 
-footer .copyright {
+.footer .copyright {
     color: #ffffff;
 }
 
-footer .socialBtnGroup {
+.footer .socialBtnGroup {
     display: flex;
 }
 
-footer .socialLink {
+.footer .socialLink {
     border: solid 2px #ffffff;
     border-radius: 32px;
     width: 42px;

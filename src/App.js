@@ -1,5 +1,5 @@
 import React from "react";
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 import { Routes, Route } from "react-router-dom";
 
 import NavBar from './components/NavBar';
@@ -18,14 +18,11 @@ import { useState } from 'react';
 
 
 function App() {
-  const [isSignedIn, setIsSignedIn] = useState(false);
+  const [isSignedIn, setIsSignedIn] = useState(true);
 
   return (
     <div className="app">
 
-      <Routes>
-          <Route path="/" element={<Home />} />
-      </Routes>
 
       <PrivateRoutes isSignedIn={isSignedIn} userShouldSignIn={true}>
         <NavBar />
@@ -43,6 +40,7 @@ function App() {
       
       <PrivateRoutes isSignedIn={isSignedIn} userShouldSignIn={false}>
         <Routes>
+          <Route path="/" element={<Home />} />
           <Route path="/signin" element={<SignIn setIsSignedIn={setIsSignedIn} />} />
         </Routes>
       </PrivateRoutes>

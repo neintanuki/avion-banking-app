@@ -91,7 +91,7 @@ export default function Home() {
                 </div>
             </section>
 
-            <footer>
+            <footer className={style.footer}>
                 <div className={style.container}>
 
                     <div className={style.copyright}>
