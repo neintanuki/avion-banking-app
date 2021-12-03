@@ -1,0 +1,41 @@
+.mainDash {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.dashboard {
+    width: 50vw;
+    height: 100vh;
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+h2 {
+    padding-bottom: 50px;
+}
+
+.dashboard2 {
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.banknameStyling {
+    color: gold;
+    font-weight: 600;
+}
+
+.cardblack {
+    width: 80%;
+    padding: 10px;
+}

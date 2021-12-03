@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import './styles/SignIn.css';
+import style from './styles/SignIn.module.css';
 
 import banking3DIllustration from '../assets/3d-stripy.png';
 
@@ -54,15 +54,15 @@ export default function SignIn({ setIsSignedIn }) {
 
 
     return (
-        <div className="sign-in">
-            <div className="left-side">
+        <div className={style.signIn}>
+            <div className={style.leftSide}>
                 <img src={banking3DIllustration} alt="banking-3d-illustration"/>
             </div>
-            <div className="right-side">
+            <div className={style.rightSide}>
                 <button onClick={test}>Click me</button>
-                <form action="" className="sign-in-form" onSubmit={userSignIn}>
-                    <h1 className="title">Sign In</h1>
-                    <p className="subtitle">Sign in to continue</p>
+                <form action="" className={style.signInForm} onSubmit={userSignIn}>
+                    <h1 className={style.title}>Sign In</h1>
+                    <p className={style.subtitle}>Sign in to continue</p>
 
                     <div className="form-control">
                         <label htmlFor="username" className="form-label">Username</label>
@@ -76,7 +76,7 @@ export default function SignIn({ setIsSignedIn }) {
                         <ErrorMsg msg={errors.password} />
                     </div>
 
-                    <button className="btn-submit">Sign In</button>
+                    <button className={style.btnSubmit}>Sign In</button>
 
                 </form>
             </div>

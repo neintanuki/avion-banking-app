@@ -46,14 +46,14 @@ nav a {
     color: #111111;
 }
 
-.sign-in-cta {
+.signInCTA {
     margin-left: auto;
     margin-right: 0;
 }
 
 
 #about,
-.two-col .container {
+.twoCol .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -61,11 +61,11 @@ nav a {
     height: 100vmin;
 }
 
-section .left-side {
+section .leftSide {
     width: 40%;
 }
 
-section .right-side {
+section .rightSide {
     width: 50%;
 }
 
@@ -79,12 +79,12 @@ section .right-side {
 }
 
 
-#about .left-side {
+#about .leftSide {
     height: 100%;
     background: url(../../assets/geometrica.png);
 }
 
-#about .right-side {
+#about .rightSide {
     padding-right: 2rem;
 }
 
@@ -93,7 +93,8 @@ section .right-side {
     padding: 2rem;
 }
 
-#features .text-content {
+#features .textContent {
+    max-width: 600px;
     margin: auto;
 }
 
@@ -108,14 +109,14 @@ section .right-side {
     /* background: #F1E8B8; */
 }
 
-#features .feature-header {
+#features .featureHeader {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 140px;
 }
 
-#features .feature-body {
+#features .featureBody {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -127,7 +128,7 @@ section .right-side {
     margin: 1rem 0 0 0;
 }
 
-#features .feature-list {
+#features .featureList {
     max-width: 900px;
     margin: 4rem auto;
     display: flex;
@@ -179,11 +180,11 @@ footer .copyright {
     color: #ffffff;
 }
 
-footer .social-btn-group {
+footer .socialBtnGroup {
     display: flex;
 }
 
-footer .social-link {
+footer .socialLink {
     border: solid 2px #ffffff;
     border-radius: 32px;
     width: 42px;

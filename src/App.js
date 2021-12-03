@@ -19,7 +19,7 @@ function App() {
   const [isSignedIn, setIsSignedIn] = useState(false);
 
   return (
-    <>
+    <div className="app">
       <NavBar />
           
       <Routes>
@@ -40,7 +40,7 @@ function App() {
       <TransactionHistory /> */}
 
       <Footer />
-    </>
+    </div>
   );
 }
 

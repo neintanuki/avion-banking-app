@@ -1,4 +1,4 @@
-import './styles/Home.css';
+import style from './styles/Home.module.css';
 
 import facebook from '../assets/facebook.svg';
 import twitter from '../assets/twitter.svg';
@@ -11,78 +11,78 @@ import onlineBanking from '../assets/online-banking.svg';
 
 export default function Home() {
     return (
-        <main className="home">
+        <main className={style.home}>
             <header>
-                <div className="container">
+                <div className={style.container}>
                     <span className="logo">Logo</span>
 
                     <nav>
                         <a href="#home">Home</a>
                         <a href="#about">About</a>
                         <a href="#features">Features</a>
-                        <a href="/signin" className="sign-in-cta">Sign In</a>
+                        <a href="/signin" className={style.signInCTA}>Sign In</a>
                     </nav>
 
                 </div>
             </header>
 
-            <section id="home" className="two-col">
-                <div className="container">
-                    <div className="left-side">
-                        <h1 className="title f-lg">Manage your bank account</h1>
-                        <p className="subtitle">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis dolorum soluta consectetur saepe alias fuga enim quia possimus! Commodi, magni.</p>
+            <section id={style.home} className={style.twoCol}>
+                <div className={style.container}>
+                    <div className={style.leftSide}>
+                        <h1 className={`${style.title} f-lg`}>Manage your bank account</h1>
+                        <p className={style.subtitle}>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis dolorum soluta consectetur saepe alias fuga enim quia possimus! Commodi, magni.</p>
                     </div>
 
-                    <div className="right-side">
+                    <div className={style.rightSide}>
                         <img src={piggyBank} alt="piggy-bank"/>
                     </div>
                 </div>
             </section>
 
-            <section id="about" className="two-col">
-                <div className="left-side">
+            <section id={style.about} className={style.twoCol}>
+                <div className={style.leftSide}>
                     {/* illustration */}
                 </div>
-                <div className="right-side">
+                <div className={style.rightSide}>
                     <div className="text-content">
-                        <h1 className="title f-lg">About Us</h1>
-                        <p className="subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione rerum officiis, repellendus, eveniet consectetur pariatur sed possimus temporibus assumenda error commodi ipsam maxime suscipit nobis hic? Modi, sapiente? Voluptate quo eaque voluptates laborum sequi mollitia aut, officiis dolor placeat perspiciatis? Eveniet possimus similique laborum qui minus explicabo voluptatibus, eius consequatur.</p>
+                        <h1 className={`${style.title} f-lg`}>About Us</h1>
+                        <p className={style.subtitle}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione rerum officiis, repellendus, eveniet consectetur pariatur sed possimus temporibus assumenda error commodi ipsam maxime suscipit nobis hic? Modi, sapiente? Voluptate quo eaque voluptates laborum sequi mollitia aut, officiis dolor placeat perspiciatis? Eveniet possimus similique laborum qui minus explicabo voluptatibus, eius consequatur.</p>
                     </div>
                 </div>
             </section>
 
-            <section id="features">
-                <div className="container">
-                    <div className="text-content">
-                        <h1 className="title f-md">Features</h1>
-                        <p className="subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate dolores laborum sunt similique in exercitationem neque tempore consectetur sapiente perferendis!</p>
+            <section id={style.features}>
+                <div className={style.container}>
+                    <div className={style.textContent}>
+                        <h1 className={`${style.title} f-md`}>Features</h1>
+                        <p className={style.subtitle}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate dolores laborum sunt similique in exercitationem neque tempore consectetur sapiente perferendis!</p>
                     </div>
 
-                    <div className="feature-list">
-                        <div className="feature">
-                            <div className="feature-header">
+                    <div className={style.featureList}>
+                        <div className={style.feature}>
+                            <div className={style.featureHeader}>
                                 <img src={onlineBanking} alt="online-banking-img"/>
                             </div>
-                            <div className="feature-body">
-                                <h2 className="title f-sm">Banking made easy</h2>
+                            <div className={style.featureBody}>
+                                <h2 className={`${style.title} f-sm`}>Banking made easy</h2>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam aperiam voluptatum quidem a omnis culpa autem fuga amet, in harum.</p>
                             </div>
                         </div>
-                        <div className="feature">
-                            <div className="feature-header">
+                        <div className={style.feature}>
+                            <div className={style.featureHeader}>
                                 <img src={dashboard} alt="dashboard-img"/>
                             </div>
-                            <div className="feature-body">
-                                <h2 className="title f-sm">Dashboard</h2>
+                            <div className={style.featureBody}>
+                                <h2 className={`${style.title} f-sm`}>Dashboard</h2>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam aperiam voluptatum quidem a omnis culpa autem fuga amet, in harum.</p>
                             </div>
                         </div>
-                        <div className="feature">
-                            <div className="feature-header">
+                        <div className={style.feature}>
+                            <div className={style.featureHeader}>
                                 <img src={ui} alt="ui-img"/>
                             </div>
-                            <div className="feature-body">
-                                <h2 className="title f-sm">Friendly UI</h2>
+                            <div className={style.featureBody}>
+                                <h2 className={`${style.title} f-sm`}>Friendly UI</h2>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam aperiam voluptatum quidem a omnis culpa autem fuga amet, in harum.</p>
                             </div>
                         </div>
@@ -92,37 +92,37 @@ export default function Home() {
             </section>
 
             <footer>
-                <div className="container">
+                <div className={style.container}>
 
-                    <div className="copyright">
+                    <div className={style.copyright}>
                         {/* logo */}
-                        <span className="copyright-text">All Rights Reserved 2021</span>
+                        <span className={style.copyrightText}>All Rights Reserved 2021</span>
                     </div>
 
-                    <div className="footer-links">
-                        <h1 className="title f-sm">Main Navigation</h1>
+                    <div className={style.footerLinks}>
+                        <h1 className={`${style.title} f-sm`}>Main Navigation</h1>
                         <a href="#home">Home</a>
                         <a href="#">Dashboard</a>
                         <a href="#">Pricing</a>
                     </div>
 
-                    <div className="footer-links">
-                        <h1 className="title f-sm">Company</h1>
+                    <div className={style.footerLinks}>
+                        <h1 className={`${style.title} f-sm`}>Company</h1>
                         <a href="#about">About Us</a>
                         <a href="#">Blog</a>
                         <a href="#">Newsletter</a>
                     </div>
 
-                    <div className="social-links">
-                        <h1 className="title f-sm">Social</h1>
-                        <div className="social-btn-group">
-                            <a href="#" className="social-link">
+                    <div className={style.socialLinks}>
+                        <h1 className={`${style.title} f-sm`}>Social</h1>
+                        <div className={style.socialBtnGroup}>
+                            <a href="#" className={style.socialLink}>
                                 <img src={facebook} alt="facebook"/>
                             </a>
-                            <a href="#" className="social-link">
+                            <a href="#" className={style.socialLink}>
                                 <img src={twitter} alt="twitter"/>
                             </a>
-                            <a href="#" className="social-link">
+                            <a href="#" className={style.socialLink}>
                                 <img src={instagram} alt="instagram"/>
                             </a>
                         </div>

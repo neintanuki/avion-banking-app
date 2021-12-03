@@ -1,9 +1,9 @@
-import "./styles/ErrorMsg.css";
+import style from "./styles/ErrorMsg.module.css";
 
 export default function ErrorMsg({ msg }) {
     if (msg) {
         return (
-            <span className="error-msg">
+            <span className={style.errorMsg}>
                 { msg }
             </span>
         )
