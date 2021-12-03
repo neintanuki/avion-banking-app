@@ -1,16 +1,11 @@
 import React from "react";
-// import { useState, useEffect } from "react";
 // import { Link } from "react-router-dom";
+
 
 // Client
 export default function Client() {
-  // const [state, setState] = useState([]);
 
-  // useEffect(() => {
-  //   userDB();
-  // }, []);
 
-  // const userDB = JSON.parse(localStorage.getItem("avion-banking-app"));
 
   return (
     <div className="client">
@@ -33,7 +28,7 @@ export default function Client() {
                 <td>{obj.data.name}</td>
                 <td>{obj.data.accountNo}</td>
                 <td>{obj.data.balance}</td>
-                <td><Link to="/transfer">Transfer Money</Link></td>
+                <td><Link to="/transact">Transact</Link></td>
               </tr>
             ))} */}
           </tbody>

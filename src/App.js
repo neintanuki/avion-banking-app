@@ -1,17 +1,16 @@
 import React from "react";
-// import 'bootstrap/dist/css/bootstrap.min.css';
 import { Routes, Route, NavLink } from "react-router-dom";
 import { Nav } from "react-bootstrap";
 
-import logo from "../assets/bnmlogo.svg";
+import logo from "./assets/bnmlogo.svg";
 
-import Dashboard from "./Dashboard";
-import Client from "./Client";
-import NewClient from "./NewClient";
-import Transact from "./Transact";
-import TransactionHistory from "./TransactionHistory";
-import SignIn from "./SignIn";
-import Footer from "./Footer";
+import Dashboard from "./components/Dashboard";
+import Client from "./components/Client";
+import NewClient from "./components/NewClient";
+import Transact from "./components/Transact";
+import TransactionHistory from "./components/TransactionHistory";
+import SignIn from "./components/SignIn";
+import Footer from "./components/Footer";
 
 
 function App() {
