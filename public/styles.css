@@ -194,7 +194,8 @@ td {
     color: gray;
     text-align: center;
     vertical-align: middle;
-    font-size: 12px;
+    font-size: 11px;
+    height: 5vh;
 }
 /* FOOTER ENDS HERE */
 
