@@ -13,6 +13,7 @@ import Client from "./pages/Client";
 import NewClient from "./pages/NewClient";
 import Transact from "./pages/Transact";
 import TransactionHistory from "./pages/TransactionHistory";
+import NotFound from "./pages/NotFound"
 
 import { useState } from 'react';
 
@@ -23,12 +24,11 @@ function App() {
   return (
     <div className="app">
 
-
       <PrivateRoutes isSignedIn={isSignedIn} userShouldSignIn={true}>
         <NavBar />
 
         <Routes>
-          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/" element={<Dashboard />} />
           <Route path="/client" element={<Client />} />
           <Route path="/new-client" element={<NewClient />} />
           <Route path="/transact" element={<Transact />} />
@@ -44,6 +44,10 @@ function App() {
           <Route path="/signin" element={<SignIn setIsSignedIn={setIsSignedIn} />} />
         </Routes>
       </PrivateRoutes>
+
+      <Routes>
+        <Route path="*" element={<NotFound />} />
+      </Routes>
           
     </div>
   );

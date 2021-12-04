@@ -14,7 +14,7 @@ function NavBar() {
             
             <div className={style.navMenu}>
                 <Nav>
-                    <NavLink className={style.navLink} to="/dashboard">Dashboard</NavLink>
+                    <NavLink className={style.navLink} to="/">Dashboard</NavLink>
                     <NavLink className={style.navLink} to="/client">Client</NavLink>
                     <NavLink className={style.navLink} to="/new-client">New Client</NavLink>
                     <NavLink className={style.navLink} to="/transact">Transact</NavLink>
