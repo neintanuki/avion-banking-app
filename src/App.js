@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 // import 'bootstrap/dist/css/bootstrap.min.css';
 import { Routes, Route } from "react-router-dom";
 
@@ -19,7 +19,24 @@ import { useState } from 'react';
 
 
 function App() {
-  const [isSignedIn, setIsSignedIn] = useState(false);
+  const [isSignedIn, setIsSignedIn] = useState(true);
+  const [usersDB, setUsersDB] = useState([]);
+
+  useEffect(() => {
+    if (usersDB.length) {
+      // if usersDB is not an empty array
+      localStorage.setItem('avion-banking-app', JSON.stringify({
+        isSignedIn,
+        users: usersDB
+      }))
+    } else {
+      const result = JSON.parse(localStorage.getItem("avion-banking-app"));
+
+      if (result && result.users) {
+        setUsersDB(result.users);
+      }
+    }
+  }, [usersDB])
 
   return (
     <div className="app">
@@ -30,7 +47,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Dashboard />} />
           <Route path="/client" element={<Client />} />
-          <Route path="/new-client" element={<NewClient />} />
+          <Route path="/new-client" element={<NewClient isSignedIn={isSignedIn} usersDB={usersDB} />} />
           <Route path="/transact" element={<Transact />} />
           <Route path="/transaction-history" element={<TransactionHistory />} />
         </Routes>
