@@ -5,7 +5,7 @@ import style from './styles/Dashboard.module.css';
 
 
 // DASHBOARD
-function Dashboard() {
+export default function Dashboard() {
   return (
     <>
       <main className={style.mainDash}>
@@ -20,5 +20,3 @@ function Dashboard() {
     </>
   );
 }
-
-export default Dashboard;

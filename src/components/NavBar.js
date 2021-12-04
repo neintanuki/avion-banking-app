@@ -5,7 +5,7 @@ import style from './styles/NavBar.module.css';
 import { NavLink } from 'react-router-dom';
 import { Nav } from "react-bootstrap";
 
-function NavBar() {
+export default function NavBar() {
     return (
         <div className={style.navbar}>
             <div className={style.innerNavbar}>
@@ -28,5 +28,3 @@ function NavBar() {
       </div>
     )
 }
-
-export default NavBar;

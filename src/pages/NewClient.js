@@ -1,18 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 // NEW CLIENT
-function NewClient() {
-  const [firstName, setFirstName] = useState('');
-  const [lastName, setLastName] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-
-  function createUserAccount(e) {
-    e.preventDefault();
-    
-
-  }
-
+export default function NewClient() {
   return (
     <div className="component-wrapper">
       <div className="newclient">
@@ -42,5 +31,3 @@ function NewClient() {
     </div>
   );
 }
-
-export default NewClient;

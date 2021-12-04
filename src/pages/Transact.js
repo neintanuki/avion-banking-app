@@ -1,7 +1,7 @@
 import React from "react";
 
 // TRANSACT
-function Transact() {
+export default function Transact() {
   return (
     <div>
       <div className="transact">
@@ -13,5 +13,3 @@ function Transact() {
     </div>
   );
 }
-
-export default Transact;
