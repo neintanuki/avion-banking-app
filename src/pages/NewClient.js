@@ -1,7 +1,7 @@
 import React from "react";
 
 // NEW CLIENT
-function NewClient() {
+export default function NewClient() {
   return (
     <div>
       <div className="newclient">
@@ -13,5 +13,3 @@ function NewClient() {
     </div>
   );
 }
-
-export default NewClient;
