@@ -69,3 +69,7 @@ a {
     display: flex;
     flex-direction: column;
 }
+
+.component-wrapper {
+    margin-top: 2rem;
+}
