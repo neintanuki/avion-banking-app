@@ -7,9 +7,13 @@ function NewClient() {
       <div className="newclient">
         <h2>New Client</h2>
       </div>
-      <div>
-        
-      </div>
+      
+      <form action="#">
+        <div className="form-control">
+          <label htmlFor="firstName" className="form-label">First Name:</label>
+          <input type="text" className="form-input" />
+        </div>
+      </form>
     </div>
   );
 }
