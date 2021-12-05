@@ -2,9 +2,7 @@
 
 * {
     box-sizing: border-box;
-    font-family: Montserrat, sans-serif;
-    /* overflow: hidden; */
- 
+    font-family: Montserrat;
 }
 
 html {
@@ -64,7 +62,6 @@ a {
 
 .client, .newclient, .transact, .transactionhistory, .signin {
     width: 50vw;
-    height: 100vh;
     text-align: justify;
     padding: 50px;
     display: flex;
