@@ -17,7 +17,6 @@ import NotFound from "./pages/NotFound"
 
 import { useState } from 'react';
 
-
 function App() {
   const [isSignedIn, setIsSignedIn] = useState(false);
   const [usersDB, setUsersDB] = useState([]);
