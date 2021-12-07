@@ -17,7 +17,6 @@ import NotFound from "./pages/NotFound"
 
 import { useState } from 'react';
 
-
 function App() {
   const [isSignedIn, setIsSignedIn] = useState(false);
   const [usersDB, setUsersDB] = useState([]);
@@ -63,12 +62,9 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/signin" element={<SignIn setIsSignedIn={setIsSignedIn} />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </PrivateRoutes>
-
-      {/* <Routes>
-        <Route path="*" element={<NotFound />} />
-      </Routes> */}
           
     </div>
   );

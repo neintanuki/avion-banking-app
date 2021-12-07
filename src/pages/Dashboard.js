@@ -3,6 +3,8 @@ import cardblack from "../assets/Front - Black.png"
 
 import style from './styles/Dashboard.module.css';
 
+import Budget from "./Budget";
+
 
 // DASHBOARD
 export default function Dashboard() {
@@ -17,6 +19,7 @@ export default function Dashboard() {
           <img className={style.cardblack} src={cardblack} alt="bnm" />
         </div>
       </main>
+      <Budget />
     </>
   );
 }

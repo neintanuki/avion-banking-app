@@ -25,7 +25,7 @@ export default function SignIn({ setIsSignedIn }) {
             users.forEach((user, index) => {
                 if (user.username === username) {
                     if (user.password === password) {
-                        alert("success")
+                        // alert("success")
                         setIsSignedIn(true);
                     } else if (index === (users.length - 1)) {
                         alert("password not found")
