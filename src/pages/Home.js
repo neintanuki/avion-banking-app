@@ -9,8 +9,6 @@ import dashboard from '../assets/dashboard.svg';
 import ui from '../assets/ui.svg';
 import onlineBanking from '../assets/online-banking.svg';
 
-import Budget from '../pages/Budget';
-
 export default function Home() {
     return (
         <main className={style.home}>
@@ -92,7 +90,7 @@ export default function Home() {
 
                 </div>
             </section>
-            <Budget />
+
             <footer className={style.footer}>
                 <div className={style.container}>
 
