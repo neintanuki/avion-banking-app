@@ -58,12 +58,9 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/signin" element={<SignIn setIsSignedIn={setIsSignedIn} />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </PrivateRoutes>
-
-      <Routes>
-        <Route path="*" element={<NotFound />} />
-      </Routes>
           
     </div>
   );

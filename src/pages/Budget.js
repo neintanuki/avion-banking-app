@@ -1,10 +1,10 @@
 import React from 'react'
 import './styles/Budget.css'
 
-import BudgetBalance from '../components/BudgetBalance'
-import BudgetAddTransact from '../components/BudgetAddTransact'
-import BudgetIncomeList from '../components/BudgetIncomeList'
-import BudgetExpenseList from '../components/BudgetExpenseList'
+import Balance from '../components/Balance'
+import AddTransact from '../components/AddTransact'
+import IncomeList from '../components/IncomeList'
+import ExpenseList from '../components/ExpenseList'
 import { GlobalContextProvider } from '../context/GlobalState'
 
 const Budget = () => {
@@ -15,10 +15,10 @@ const Budget = () => {
                 <div className="header">
                     <h1>Budget</h1>
                 </div>
-                <BudgetBalance />
-                <BudgetAddTransact />
-                <BudgetIncomeList />
-                <BudgetExpenseList />
+                <Balance />
+                <AddTransact />
+                <IncomeList />
+                <ExpenseList />
             </div>
         </div>
         </GlobalContextProvider>
