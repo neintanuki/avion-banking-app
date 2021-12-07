@@ -3,7 +3,7 @@ import React from "react";
 // Client
 export default function Client({ users }) {
   return (
-    <div>
+    <div className="component-wrapper">
       <div className="client">
         <h2>Client Database</h2>
         <div className="client">
@@ -23,9 +23,9 @@ export default function Client({ users }) {
               return(
               <tr key={index}>
                 <td>{index}</td>
-                <td>{user.firstName}</td>
-                <td>{user.lastName}</td>
-                <td>{user.initialBalance}</td>
+                <td>{user.firstName ? user.firstName : "N/A"}</td>
+                <td>{user.lastName ? user.lastName : "N/A"}</td>
+                <td>{user.initialBalance ? user.initialBalance : "N/A" }</td>
                 <td>{user.isAdmin ? "Admin" : "User"}</td>
               </tr>
               )

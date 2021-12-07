@@ -8,6 +8,19 @@ export default function NewClient({ isSignedIn, users, onUsers }) {
   const [lastName, setLastName] = useState('');
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const [usernameExists, setUsernameExists] = useState(false);
+
+  useEffect(() => {
+    if (username) {
+      for(let i = 0; i < users.length; i++) {
+        if(users[i].username === username) {
+          setUsernameExists(true);
+          alert('username already exists');
+          break;
+        }
+      }
+    }
+  }, [username, users]);
 
   function clearStates() {
     setInitialBalance(0);
@@ -30,7 +43,7 @@ export default function NewClient({ isSignedIn, users, onUsers }) {
         }
         break;
       case "name":
-        if (!val.match(/[0-9|\W]/g)) {
+        if (!val.match(/[0-9]/g)) {
           val = val.replace(/\s{2}/g, " ").toLowerCase().split(" ");
 
           for (let i = 0; i < val.length; i++) {
@@ -60,7 +73,7 @@ export default function NewClient({ isSignedIn, users, onUsers }) {
   function createUserAccount(e) {
     e.preventDefault();
 
-    if (isSignedIn) {
+    if (isSignedIn && !usernameExists) {
       if (isAdmin) {
         onUsers([...users, {
           username,
@@ -77,11 +90,6 @@ export default function NewClient({ isSignedIn, users, onUsers }) {
           isAdmin
         }])
       }
-
-      localStorage.setItem('avion-banking-app', JSON.stringify({
-        isSignedIn,
-        users
-      }))
     }
 
     clearStates();
