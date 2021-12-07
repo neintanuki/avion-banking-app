@@ -46,7 +46,7 @@ export default function SignIn({ setIsSignedIn }) {
     function test() {
         localStorage.setItem("avion-banking-app", JSON.stringify({
             users: [
-                {username: "admin", password: "123456"}
+                {username: "admin", password: "123456", isAdmin: true}
             ],
             isSignedIn: false
         }))

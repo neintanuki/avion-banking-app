@@ -25,7 +25,7 @@ export default function Client({ users }) {
                 <td>{index}</td>
                 <td>{user.firstName ? user.firstName : "N/A"}</td>
                 <td>{user.lastName ? user.lastName : "N/A"}</td>
-                <td>{user.initialBalance === 0 ? user.initialBalance : "N/A"}</td>
+                <td>{user.initialBalance ? user.initialBalance : "N/A" }</td>
                 <td>{user.isAdmin ? "Admin" : "User"}</td>
               </tr>
               )

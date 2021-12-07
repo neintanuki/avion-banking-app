@@ -35,8 +35,12 @@ function App() {
       if (result && result.users) {
         setUsersDB(result.users);
       }
+
+      if (result && result.isSignedIn) {
+        setIsSignedIn(result.isSignedIn);
+      }
     }
-  }, [usersDB])
+  }, [usersDB, isSignedIn])
 
   return (
     <div className="app">
@@ -48,7 +52,7 @@ function App() {
           <Route path="/" element={<Dashboard />} />
           <Route path="/client" element={<Client users={usersDB} />} />
           <Route path="/new-client" element={<NewClient isSignedIn={isSignedIn} users={usersDB} onUsers={setUsersDB} />} />
-          <Route path="/transact" element={<Transact />} />
+          <Route path="/transact" element={<Transact users={usersDB} />} />
           <Route path="/transaction-history" element={<TransactionHistory />} />
         </Routes>
 
@@ -62,9 +66,9 @@ function App() {
         </Routes>
       </PrivateRoutes>
 
-      <Routes>
+      {/* <Routes>
         <Route path="*" element={<NotFound />} />
-      </Routes>
+      </Routes> */}
           
     </div>
   );
