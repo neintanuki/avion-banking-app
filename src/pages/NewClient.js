@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 // NEW CLIENT
 export default function NewClient({ isSignedIn, users, onUsers }) {
   const [isAdmin, setIsAdmin] = useState(false);
+  const [accountNumber, setAccountNumber] = useState('');
   const [initialBalance, setInitialBalance] = useState(0);
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
@@ -11,6 +12,38 @@ export default function NewClient({ isSignedIn, users, onUsers }) {
   const [usernameExists, setUsernameExists] = useState(false);
 
   useEffect(() => {
+    if (!accountNumber) {
+      const accountNumberLength = 14;
+      const putDashOn = 5;
+
+      let accountNumberTaken = false;
+      let accountNumberArray = accountNumber.split();
+
+      
+      do {
+        for (let i = 0; i < accountNumberLength; i++) {
+          if (((i + 1) >= putDashOn) && !((i + 1) % putDashOn)) {
+            accountNumberArray[i] = "-";
+          } else {
+            accountNumberArray[i] = accountNumber + Math.floor(Math.random() * 9)
+          }
+        }
+        
+        users.forEach(user => {
+          if (user.accountNumber === accountNumber) {
+            accountNumberArray = [];
+            accountNumberTaken = true;
+          } else {
+            accountNumberTaken = false;
+          }
+        })
+      } while(accountNumberTaken)
+
+      setAccountNumber(accountNumberArray.join(""))
+    }
+
+
+
     if (username) {
       for(let i = 0; i < users.length; i++) {
         if(users[i].username === username) {
@@ -20,7 +53,7 @@ export default function NewClient({ isSignedIn, users, onUsers }) {
         }
       }
     }
-  }, [username, users]);
+  }, [username, users, accountNumber]);
 
   function clearStates() {
     setInitialBalance(0);
@@ -82,6 +115,7 @@ export default function NewClient({ isSignedIn, users, onUsers }) {
         }])
       } else {
         onUsers([...users, {
+          accountNumber,
           initialBalance,
           firstName,
           lastName,
@@ -90,9 +124,10 @@ export default function NewClient({ isSignedIn, users, onUsers }) {
           isAdmin
         }])
       }
+
+      clearStates();
     }
 
-    clearStates();
   }
 
   function toggleRole(e) {
@@ -125,6 +160,10 @@ export default function NewClient({ isSignedIn, users, onUsers }) {
 
           { !isAdmin &&
             <> 
+            <div className="form-control">
+              <label className="form-label">Account Number:</label>
+              <input type="text" className="form-input" value={accountNumber} disabled/>
+            </div>
             <div className="form-control">
               <label className="form-label">Initial Balance:</label>
               <input type="text" className="form-input" value={initialBalance} min="0" max="1000000" onChange={e => {validateInput(e.target.value, "num", setInitialBalance)}} required/>
