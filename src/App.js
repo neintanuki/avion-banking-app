@@ -51,7 +51,7 @@ function App() {
           <Route path="/" element={<Dashboard />} />
           <Route path="/client" element={<Client users={usersDB} />} />
           <Route path="/new-client" element={<NewClient isSignedIn={isSignedIn} users={usersDB} onUsers={setUsersDB} />} />
-          <Route path="/transact" element={<Transact users={usersDB} />} />
+          <Route path="/transact" element={<Transact users={usersDB} onUsers={setUsersDB} />} />
           <Route path="/transaction-history" element={<TransactionHistory />} />
         </Routes>
 
