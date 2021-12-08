@@ -36,6 +36,7 @@ function Transact({ users, onUsers }) {
                   }
                   break;
                 case "deposit":
+                  user.initialBalance += amount;
                   break;
                 default:
                   alert("type invalid");
@@ -82,7 +83,7 @@ function Transact({ users, onUsers }) {
     
             <div className="form-control">
               <h3>Enter Amount:</h3>
-              <input type="number" className="form-input" value={amount} onChange={e => setAmount(e.target.value)} />
+              <input type="text" className="form-input" value={amount} onChange={e => setAmount(Number(e.target.value))} />
             </div>
     
             <button className="btn-submit">{transactionType.charAt(0).toUpperCase() + transactionType.slice(1)}</button>
