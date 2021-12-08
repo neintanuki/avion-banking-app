@@ -10,7 +10,7 @@ export default function Client({ users }) {
         <table>
           <thead>
             <tr>
-              <th>Key</th>
+              <th>Account Number</th>
               <th>First Name</th>
               <th>Last Name</th>
               <th>Initial Balance</th>
@@ -19,13 +19,13 @@ export default function Client({ users }) {
           </thead>
           <tbody>
           {
-            users.map((user, index) => {
+            users.map(user => {
               return(
-              <tr key={index}>
-                <td>{index}</td>
+              <tr key={user.accountNumber}>
+                <td>{user.accountNumber}</td>
                 <td>{user.firstName ? user.firstName : "N/A"}</td>
                 <td>{user.lastName ? user.lastName : "N/A"}</td>
-                <td>{user.initialBalance ? user.initialBalance : "N/A" }</td>
+                <td>{user.initialBalance >= 0 ? user.initialBalance : "N/A" }</td>
                 <td>{user.isAdmin ? "Admin" : "User"}</td>
               </tr>
               )

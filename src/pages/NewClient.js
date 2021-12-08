@@ -50,12 +50,18 @@ export default function NewClient({ isSignedIn, users, onUsers }) {
           setUsernameExists(true);
           alert('username already exists');
           break;
+        } else {
+          setUsernameExists(false);
         }
       }
     }
   }, [username, users, accountNumber]);
 
-  function clearStates() {
+  function clearStates(includeAccountNumber = false) {
+    if (includeAccountNumber) {
+      setAccountNumber('');
+    }
+
     setInitialBalance(0);
     setFirstName('');
     setLastName('');
@@ -109,6 +115,7 @@ export default function NewClient({ isSignedIn, users, onUsers }) {
     if (isSignedIn && !usernameExists) {
       if (isAdmin) {
         onUsers([...users, {
+          accountNumber,
           username,
           password,
           isAdmin
@@ -125,7 +132,7 @@ export default function NewClient({ isSignedIn, users, onUsers }) {
         }])
       }
 
-      clearStates();
+      clearStates(true);
     }
 
   }
@@ -154,16 +161,16 @@ export default function NewClient({ isSignedIn, users, onUsers }) {
                 <input type="radio" name="role" value="false" checked={false === isAdmin} onChange={toggleRole}/>
                 User
               </label>
-
             </div>
+          </div>
+
+          <div className="form-control">
+            <label className="form-label">Account Number:</label>
+            <input type="text" className="form-input" value={accountNumber} disabled/>
           </div>
 
           { !isAdmin &&
             <> 
-            <div className="form-control">
-              <label className="form-label">Account Number:</label>
-              <input type="text" className="form-input" value={accountNumber} disabled/>
-            </div>
             <div className="form-control">
               <label className="form-label">Initial Balance:</label>
               <input type="text" className="form-input" value={initialBalance} min="0" max="1000000" onChange={e => {validateInput(e.target.value, "num", setInitialBalance)}} required/>

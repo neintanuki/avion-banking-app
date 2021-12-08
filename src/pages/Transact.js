@@ -51,7 +51,7 @@ export default function Transact({ users }) {
               {
                 filteredUsers.map((user, index) => {
                   return (
-                    <option value={index}>{`${user.username} ${user.isAdmin}`}</option>
+                    <option value={index}>{`${user.username} ${user.accountNumber}`}</option>
                   )
                 })
               }
