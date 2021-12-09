@@ -8,16 +8,14 @@ function Transact({ users, onUsers, account }) {
 
     useEffect(() => {
         if (users.length) {
-          setFilteredUsers(
-            users.filter(user => {
-              return !user.isAdmin;
-            })
-          )
+          const clientUsers = users.filter(user => {
+            return !user.isAdmin;
+          }) 
+
+          setFilteredUsers(clientUsers);
+          setSelectedUser(clientUsers[0].accountNumber);
         }
 
-        if (filteredUsers.length) {
-          setSelectedUser(filteredUsers[0].accountNumber);
-        }
       }, [users])
 
       function saveTransactionHistory() {
@@ -39,11 +37,11 @@ function Transact({ users, onUsers, account }) {
 
       function transact(e) {
         e.preventDefault();
-
+        
         onUsers(
           users.map(user => {
             if (user.accountNumber === selectedUser && !user.isAdmin) {
-  
+              
               switch (transactionType) {
                 case "withdraw":
                   if (user.initialBalance > amount) {
