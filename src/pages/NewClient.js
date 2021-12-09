@@ -118,7 +118,8 @@ export default function NewClient({ isSignedIn, users, onUsers }) {
           accountNumber,
           username,
           password,
-          isAdmin
+          isAdmin,
+          transactionHistory: []
         }])
       } else {
         onUsers([...users, {
@@ -128,7 +129,8 @@ export default function NewClient({ isSignedIn, users, onUsers }) {
           lastName,
           username,
           password,
-          isAdmin
+          isAdmin,
+          transactionHistory: []
         }])
       }
 

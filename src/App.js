@@ -19,15 +19,17 @@ import { useState } from 'react';
 
 function App() {
   const [isSignedIn, setIsSignedIn] = useState(false);
+  const [accountSignedIn, setAccountSignedIn] = useState('');
   const [usersDB, setUsersDB] = useState([]);
 
   useEffect(() => {
     if (usersDB.length) {
       // if usersDB is not an empty array
       localStorage.setItem('avion-banking-app', JSON.stringify({
+        accountSignedIn,
         isSignedIn,
         users: usersDB
-      }))
+      }));
     } else {
       const result = JSON.parse(localStorage.getItem("avion-banking-app"));
 
@@ -38,8 +40,15 @@ function App() {
       if (result && result.isSignedIn) {
         setIsSignedIn(result.isSignedIn);
       }
+
+      if (result && result.accountSignedIn) {
+        setAccountSignedIn(result.accountSignedIn);
+      }
     }
-  }, [usersDB, isSignedIn])
+
+
+  }, [usersDB, isSignedIn]);
+
 
   return (
     <div className="app">
@@ -51,8 +60,8 @@ function App() {
           <Route path="/" element={<Dashboard />} />
           <Route path="/client" element={<Client users={usersDB} />} />
           <Route path="/new-client" element={<NewClient isSignedIn={isSignedIn} users={usersDB} onUsers={setUsersDB} />} />
-          <Route path="/transact" element={<Transact users={usersDB} onUsers={setUsersDB} />} />
-          <Route path="/transaction-history" element={<TransactionHistory />} />
+          <Route path="/transact" element={<Transact users={usersDB} onUsers={setUsersDB} account={accountSignedIn} />} />
+          <Route path="/transaction-history" element={<TransactionHistory account={accountSignedIn} users={usersDB} />} />
         </Routes>
 
         <Footer />
@@ -61,7 +70,7 @@ function App() {
       <PrivateRoutes isSignedIn={isSignedIn} userShouldSignIn={false}>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/signin" element={<SignIn setIsSignedIn={setIsSignedIn} />} />
+          <Route path="/signin" element={<SignIn setIsSignedIn={setIsSignedIn} onAccountSignedIn={setAccountSignedIn}/>} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </PrivateRoutes>

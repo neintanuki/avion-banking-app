@@ -1,17 +1,22 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import TransactionHistoryComponent from '../components/TransactionHistory';
 
 // TRANSACTION HISTORY
-function TransactionHistory() {
-  return (
-    <div>
-      <div className="transactionhistory">
-        <h2>Transaction History</h2>
-      </div>
-      <div className="transactionhistory">
-        
-      </div>
-    </div>
-  );
+function TransactionHistory({ account, users }) {
+  const [transactionHistory, setTransactionHistory] = useState([]);
+
+  useEffect(() => {
+    if (account) {
+      users.forEach(user => {
+        if(user.accountNumber === account) {
+          console.log(user.transactionHistory)
+          setTransactionHistory(user.transactionHistory);
+        }
+      })
+    }
+  }, [account, users])
+
+  return <TransactionHistoryComponent  transactionHistory={transactionHistory} />
 }
 
 export default TransactionHistory;

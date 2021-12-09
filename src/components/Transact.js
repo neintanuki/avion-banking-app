@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-function Transact({ users, onUsers }) {
+function Transact({ users, onUsers, account }) {
     const [transactionType, setTransactionType] = useState("withdraw");
     const [selectedUser, setSelectedUser] = useState('');
     const [filteredUsers, setFilteredUsers] = useState([]);
@@ -20,6 +20,26 @@ function Transact({ users, onUsers }) {
         }
       }, [users])
 
+      function saveTransactionHistory() {
+        alert("save fired")
+        onUsers(
+          users.map(user => {
+            if (user.accountNumber === account) {
+                  
+              user.transactionHistory.push({
+                action: transactionType,
+                amount,
+                date: new Date()
+              })
+              alert("match")
+            }
+            console.log(account)
+            return user;
+          })
+        )
+      }
+
+
       function transact(e) {
         e.preventDefault();
 
@@ -29,18 +49,25 @@ function Transact({ users, onUsers }) {
   
               switch (transactionType) {
                 case "withdraw":
+                  alert("withdarw")
                   if (user.initialBalance > amount) {
                     user.initialBalance -= amount;
+                    saveTransactionHistory();
+
                   } else {
                     alert("Insufficient Amount");
                   }
+
                   break;
                 case "deposit":
+                  alert("diposit")
                   user.initialBalance += amount;
+                  saveTransactionHistory();
                   break;
                 default:
                   alert("type invalid");
               }
+
             }
 
             return user;

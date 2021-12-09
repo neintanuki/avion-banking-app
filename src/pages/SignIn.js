@@ -5,7 +5,7 @@ import banking3DIllustration from '../assets/3d-stripy.png';
 
 import ErrorMsg from '../components/ErrorMsg';
 
-export default function SignIn({ setIsSignedIn }) {
+export default function SignIn({ setIsSignedIn, onAccountSignedIn }) {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [errors, setErrors] = useState({
@@ -27,6 +27,7 @@ export default function SignIn({ setIsSignedIn }) {
                     if (user.password === password) {
                         // alert("success")
                         setIsSignedIn(true);
+                        onAccountSignedIn(user.accountNumber);
                     } else if (index === (users.length - 1)) {
                         alert("password not found")
                         errorsInstance.password = "Invalid Password"
@@ -46,9 +47,10 @@ export default function SignIn({ setIsSignedIn }) {
     function test() {
         localStorage.setItem("avion-banking-app", JSON.stringify({
             users: [
-                {accountNumber: "0000-0000-0000", username: "admin", password: "123456", isAdmin: true}
+                {accountNumber: "0000-0000-0000", username: "admin", password: "123456", isAdmin: true, transactionHistory: []}
             ],
-            isSignedIn: false
+            isSignedIn: false,
+            accountSignedIn: ''
         }))
     }
 
