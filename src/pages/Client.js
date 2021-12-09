@@ -6,7 +6,7 @@ export default function Client({ users }) {
     <div className="component-wrapper">
       <div className="client">
         <h2>Client Database</h2>
-        <div className="client">
+        <div className="inner-client">
         <table>
           <thead>
             <tr>

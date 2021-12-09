@@ -60,7 +60,8 @@ a {
     color: white;
 }
 
-.client, .newclient, .transact, .transactionhistory, .signin {
+.client, .inner-client, .newclient, .transact, .transactionhistory, .signin {
+    margin-top: 50px;
     width: 50vw;
     text-align: justify;
     padding: 50px;
@@ -71,3 +72,40 @@ a {
 .component-wrapper {
     margin-top: 2rem;
 }
+
+/* CLIENT DATABASE STARTS HERE */
+td {
+    padding: 10px;
+    
+}
+
+.inner-client {
+    margin-top: 50px;
+    background-color: rgba(0, 0, 0, 0.1);  
+    backdrop-filter: blur(5px);
+    border-radius: 25px;
+}
+
+/* CLIENT DATABASE ENDS HERE */
+
+/* NEW CLIENT STARTS HERE */
+
+.inner-newclient {
+    margin-top: 50px;
+    background-color: rgba(0, 0, 0, 0.1);  
+    backdrop-filter: blur(5px);
+    border-radius: 25px;
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-bottom: 20px;
+}
+
+.btn-submit {
+    background-color: gray;
+    border: gray;
+    border-radius: 25px;
+    color: white;
+    padding: 15px;
+}
+
+/* NEW CLIENT ENDS HERE */
