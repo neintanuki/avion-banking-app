@@ -55,7 +55,7 @@ function Transact({ users, onUsers }) {
         <div className="component-wrapper">
           <form className="transact" onSubmit={transact}>
             <h2>Transact</h2>
-    
+          <div className="inner-transact">
             <div className="form-control">
               <h3>Transaction Type:</h3>
               <select id="transaction-type" value={transactionType} onChange={e => {setTransactionType(e.target.value)}}>
@@ -87,7 +87,7 @@ function Transact({ users, onUsers }) {
             </div>
     
             <button className="btn-submit">{transactionType.charAt(0).toUpperCase() + transactionType.slice(1)}</button>
-    
+          </div>
           </form>
         </div>
       );
