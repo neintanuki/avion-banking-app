@@ -21,7 +21,6 @@ function Transact({ users, onUsers, account }) {
       }, [users])
 
       function saveTransactionHistory() {
-        alert("save fired")
         onUsers(
           users.map(user => {
             if (user.accountNumber === account) {
@@ -31,9 +30,7 @@ function Transact({ users, onUsers, account }) {
                 amount,
                 date: new Date()
               })
-              alert("match")
             }
-            console.log(account)
             return user;
           })
         )
@@ -49,7 +46,6 @@ function Transact({ users, onUsers, account }) {
   
               switch (transactionType) {
                 case "withdraw":
-                  alert("withdarw")
                   if (user.initialBalance > amount) {
                     user.initialBalance -= amount;
                     saveTransactionHistory();
@@ -60,7 +56,6 @@ function Transact({ users, onUsers, account }) {
 
                   break;
                 case "deposit":
-                  alert("diposit")
                   user.initialBalance += amount;
                   saveTransactionHistory();
                   break;

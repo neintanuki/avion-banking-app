@@ -9,7 +9,6 @@ function TransactionHistory({ account, users }) {
     if (account) {
       users.forEach(user => {
         if(user.accountNumber === account) {
-          console.log(user.transactionHistory)
           setTransactionHistory(user.transactionHistory);
         }
       })
