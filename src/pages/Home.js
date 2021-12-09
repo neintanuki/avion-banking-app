@@ -96,7 +96,7 @@ export default function Home() {
 
                     <div className={style.copyright}>
                         {/* logo */}
-                        <span className={style.copyrightText}>All Rights Reserved 2021</span>
+                        <span className={style.copyrightText}>AR. All Rights Reserved 2021</span>
                     </div>
 
                     <div className={style.footerLinks}>

@@ -149,6 +149,7 @@ export default function NewClient({ isSignedIn, users, onUsers }) {
     <div className="component-wrapper">
       <div className="newclient">
         <h2>New Client</h2>
+        <div className="inner-newclient">
         <form action="#" onSubmit={createUserAccount}>
           <div className="form-control">
             <label className="form-label">Role:</label>
@@ -196,8 +197,11 @@ export default function NewClient({ isSignedIn, users, onUsers }) {
             <input type="password" className="form-input" value={password} onChange={e => {setPassword(e.target.value)}} required/>
           </div>
 
+          <div className="btn-div">
           <button className="btn-submit">Create Account</button>
+          </div>
         </form>
+        </div>
       </div>
       
     </div>
