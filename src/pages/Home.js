@@ -9,12 +9,15 @@ import dashboard from '../assets/dashboard.svg';
 import ui from '../assets/ui.svg';
 import onlineBanking from '../assets/online-banking.svg';
 
+import logo from "../assets/bnmlogo.svg";
+
 export default function Home() {
     return (
         <main className={style.home}>
             <header>
                 <div className={style.container}>
-                    <span className="logo">Logo</span>
+                    <img className={style.bnmlogohome} src={logo} alt="bnm logo" />
+                    <span className={style.bnmwordmark}>BNM</span>
 
                     <nav>
                         <a href="#home">Home</a>
@@ -100,21 +103,21 @@ export default function Home() {
                     </div>
 
                     <div className={style.footerLinks}>
-                        <h1 className={`${style.title} f-sm`}>Main Navigation</h1>
+                        <h3 className={`${style.title} f-sm`}>Main Navigation</h3>
                         <a href="#home">Home</a>
                         <a href="#">Dashboard</a>
                         <a href="#">Pricing</a>
                     </div>
 
                     <div className={style.footerLinks}>
-                        <h1 className={`${style.title} f-sm`}>Company</h1>
+                        <h3 className={`${style.title} f-sm`}>Company</h3>
                         <a href="#about">About Us</a>
                         <a href="#">Blog</a>
                         <a href="#">Newsletter</a>
                     </div>
 
                     <div className={style.socialLinks}>
-                        <h1 className={`${style.title} f-sm`}>Social</h1>
+                        <h3 className={`${style.title} f-sm`}>Social</h3>
                         <div className={style.socialBtnGroup}>
                             <a href="#" className={style.socialLink}>
                                 <img src={facebook} alt="facebook"/>

@@ -33,7 +33,8 @@ a {
 }
 
 .f-sm {
-    font-size: 1.6rem;
+    font-size: 1rem;
+    color: white;
 }
 
 .f-md {
@@ -71,6 +72,7 @@ a {
 
 .component-wrapper {
     margin-top: 2rem;
+    height: 100vh;
 }
 
 /* CLIENT DATABASE STARTS HERE */
@@ -127,5 +129,7 @@ td {
     padding-right: 80px;
     padding-bottom: 20px;
 }
+
+
 
 /* TRANSACT ENDS HERE */
