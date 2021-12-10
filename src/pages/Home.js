@@ -10,6 +10,9 @@ import ui from '../assets/ui.svg';
 import onlineBanking from '../assets/online-banking.svg';
 
 import logo from "../assets/bnmlogo.svg";
+import CardSelection from '../components/CardSelection';
+import { NavLink } from 'react-router-dom';
+import { Nav } from "react-bootstrap";
 
 export default function Home() {
     return (
@@ -23,11 +26,15 @@ export default function Home() {
                         <a href="#home">Home</a>
                         <a href="#about">About</a>
                         <a href="#features">Features</a>
+                        <a href="/cardselection">Credit</a>
                         <a href="/signin" className={style.signInCTA}>Sign In</a>
                     </nav>
 
                 </div>
             </header>
+            <Nav>
+                <NavLink className={style.navLink} to="/cardselection">Credit</NavLink>
+            </Nav>
 
             <section id={style.home} className={style.twoCol}>
                 <div className={style.container}>
