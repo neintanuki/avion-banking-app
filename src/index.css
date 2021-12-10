@@ -343,6 +343,13 @@ img {
 .red {
     width: 50vw;
     margin-left: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.red-card {
+    width: 70%;
 }
 
 .white {

@@ -78,16 +78,7 @@ export default function CardSelection() {
                         <button className="btn-apply btn-blue">Get this card ></button>
                     </div>
                     
-                    <div className="card-wrapper red">
                     
-                    
-                    </div>
-                </div>
-
-                <div className="innercard-wrapper">
-                    <div className="card-wrapper yellow">
-
-                    </div>
                     <div className="card-wrapper green">
                         <div className="green-wraper1">
                             <h3 className="green-titlecard"> Green Card</h3>
@@ -102,7 +93,15 @@ export default function CardSelection() {
                         </div>
                         
                     </div>
+                    
                 </div>
+
+                {/* <div className="innercard-wrapper">
+                    <div className="card-wrapper yellow">
+
+                    </div>
+                    
+                </div> */}
 
                 
 
