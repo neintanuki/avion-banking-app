@@ -12,6 +12,7 @@ import Dashboard from "./pages/Dashboard";
 import Client from "./pages/Client";
 import NewClient from "./pages/NewClient";
 import Transact from "./pages/Transact";
+import Transfer from "./pages/Transfer";
 import TransactionHistory from "./pages/TransactionHistory";
 import NotFound from "./pages/NotFound"
 
@@ -72,6 +73,7 @@ function App() {
 
         <Routes>
           <Route path="/" element={<Dashboard />} />
+          <Route path="/transfer" element={<Transfer users={usersDB} account={accountSignedIn} onUsers={setUsersDB} />} />
           <Route path="/transact" element={<Transact users={usersDB} onUsers={setUsersDB} account={accountSignedIn} />} />
           <Route path="/transaction-history" element={<TransactionHistory account={accountSignedIn} users={usersDB} />} />
         </Routes>
