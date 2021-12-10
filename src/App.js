@@ -54,7 +54,7 @@ function App() {
     <div className="app">
 
       <PrivateRoutes isSignedIn={isSignedIn} userShouldSignIn={true} isAdmin={true} accountSignedIn={accountSignedIn} users={usersDB}>
-        <NavBar />
+        <NavBar setIsSignedIn={setIsSignedIn} setAccountSignedIn={setAccountSignedIn} />
 
         <Routes>
           <Route path="/" element={<Dashboard />} />
@@ -66,11 +66,23 @@ function App() {
 
         <Footer />
       </PrivateRoutes>
+
+      <PrivateRoutes isSignedIn={isSignedIn} userShouldSignIn={true} isAdmin={false} accountSignedIn={accountSignedIn} users={usersDB}>
+        <NavBar setIsSignedIn={setIsSignedIn} setAccountSignedIn={setAccountSignedIn} />
+
+        <Routes>
+          <Route path="/" element={<Dashboard />} />
+        </Routes>
+
+        <Footer />
+
+      </PrivateRoutes>
       
-      <PrivateRoutes isSignedIn={isSignedIn} userShouldSignIn={false}>
+      <PrivateRoutes isSignedIn={isSignedIn} userShouldSignIn={false} isPublic={true} >
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/signin" element={<SignIn setIsSignedIn={setIsSignedIn} onAccountSignedIn={setAccountSignedIn}/>} />
+          { !isSignedIn && <Route path="/signin" element={<SignIn setIsSignedIn={setIsSignedIn} onAccountSignedIn={setAccountSignedIn}/>} />}
+
           <Route path="*" element={<NotFound />} />
         </Routes>
       </PrivateRoutes>

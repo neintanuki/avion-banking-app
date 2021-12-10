@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-function PrivateRoutes({ isSignedIn, userShouldSignIn, isAdmin, accountSignedIn, users, children }) {
+function PrivateRoutes({ isSignedIn, userShouldSignIn, isAdmin, accountSignedIn, users, isPublic, children }) {
     const [isAccepted, setIsAccepted] = useState(false);
 
     useEffect(() => {
@@ -13,7 +13,9 @@ function PrivateRoutes({ isSignedIn, userShouldSignIn, isAdmin, accountSignedIn,
         }
     }, [users])
 
-    if (isSignedIn === userShouldSignIn && isAccepted) {
+    if (!isSignedIn && isPublic) {
+        return children
+    } else if (isSignedIn === userShouldSignIn && isAccepted) {
         return children
     } else {
         return null

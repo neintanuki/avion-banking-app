@@ -25,15 +25,13 @@ export default function SignIn({ setIsSignedIn, onAccountSignedIn }) {
             users.forEach((user, index) => {
                 if (user.username === username) {
                     if (user.password === password) {
-                        // alert("success")
                         setIsSignedIn(true);
                         onAccountSignedIn(user.accountNumber);
-                    } else if (index === (users.length - 1)) {
-                        alert("password not found")
+                        window.location = "/";
+                    } else {
                         errorsInstance.password = "Invalid Password"
                     }
-                } else if (index === (users.length - 1)) {
-                    alert("username not found");
+                } else if (index === (users.length - 1) && errors.password) {
                     errorsInstance.username = "Invalid Username";
                 }
             })

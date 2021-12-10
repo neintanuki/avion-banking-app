@@ -5,7 +5,12 @@ import style from './styles/NavBar.module.css';
 import { NavLink } from 'react-router-dom';
 import { Nav } from "react-bootstrap";
 
-export default function NavBar() {
+export default function NavBar({ setIsSignedIn, setAccountSignedIn }) {
+    function logout() {
+        setIsSignedIn(false);
+        setAccountSignedIn("");
+    }
+
     return (
         <div className={style.navbar}>
             <div className={style.innerNavbar}>
@@ -23,7 +28,7 @@ export default function NavBar() {
             </div>
 
             <div className={style.signIn}>
-                <NavLink className={style.navLink} to="/SignIn">Log Out</NavLink>
+                <NavLink className={style.navLink} to="/signin" onClick={logout}>Log Out</NavLink>
             </div>
       </div>
     )
