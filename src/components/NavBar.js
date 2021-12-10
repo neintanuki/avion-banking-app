@@ -5,7 +5,7 @@ import style from './styles/NavBar.module.css';
 import { NavLink } from 'react-router-dom';
 import { Nav } from "react-bootstrap";
 
-export default function NavBar({ setIsSignedIn, setAccountSignedIn }) {
+export default function NavBar({ setIsSignedIn, setAccountSignedIn, isAdmin }) {
     function logout() {
         setIsSignedIn(false);
         setAccountSignedIn("");
@@ -18,13 +18,25 @@ export default function NavBar({ setIsSignedIn, setAccountSignedIn }) {
             </div>
             
             <div className={style.navMenu}>
-                <Nav>
-                    <NavLink className={style.navLink} to="/">Dashboard</NavLink>
-                    <NavLink className={style.navLink} to="/client">Client</NavLink>
-                    <NavLink className={style.navLink} to="/new-client">New Client</NavLink>
-                    <NavLink className={style.navLink} to="/transact">Transact</NavLink>
-                    <NavLink className={style.navLink} to="/transaction-history">Transaction History</NavLink>
-                </Nav>
+                {
+                    isAdmin ? (
+                        <Nav>
+                            <NavLink className={style.navLink} to="/">Dashboard</NavLink>
+                            <NavLink className={style.navLink} to="/client">Client</NavLink>
+                            <NavLink className={style.navLink} to="/new-client">New Client</NavLink>
+                            <NavLink className={style.navLink} to="/transact">Transact</NavLink>
+                            <NavLink className={style.navLink} to="/transaction-history">Transaction History</NavLink>
+                        </Nav>
+                    ) : (
+                        <Nav>
+                            <NavLink className={style.navLink} to="/">Dashboard</NavLink>
+                            <NavLink className={style.navLink} to="/my-account">My Account</NavLink>
+                            <NavLink className={style.navLink} to="/transfer">Transfer</NavLink>
+                            <NavLink className={style.navLink} to="/transact">Transact</NavLink>
+                            <NavLink className={style.navLink} to="/transaction-history">Transaction History</NavLink>
+                        </Nav>
+                    )
+                }
             </div>
 
             <div className={style.signIn}>

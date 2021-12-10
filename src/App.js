@@ -54,7 +54,7 @@ function App() {
     <div className="app">
 
       <PrivateRoutes isSignedIn={isSignedIn} userShouldSignIn={true} isAdmin={true} accountSignedIn={accountSignedIn} users={usersDB}>
-        <NavBar setIsSignedIn={setIsSignedIn} setAccountSignedIn={setAccountSignedIn} />
+        <NavBar setIsSignedIn={setIsSignedIn} setAccountSignedIn={setAccountSignedIn} isAdmin={true} />
 
         <Routes>
           <Route path="/" element={<Dashboard />} />
@@ -68,10 +68,12 @@ function App() {
       </PrivateRoutes>
 
       <PrivateRoutes isSignedIn={isSignedIn} userShouldSignIn={true} isAdmin={false} accountSignedIn={accountSignedIn} users={usersDB}>
-        <NavBar setIsSignedIn={setIsSignedIn} setAccountSignedIn={setAccountSignedIn} />
+        <NavBar setIsSignedIn={setIsSignedIn} setAccountSignedIn={setAccountSignedIn} isAdmin={false}/>
 
         <Routes>
           <Route path="/" element={<Dashboard />} />
+          <Route path="/transact" element={<Transact users={usersDB} onUsers={setUsersDB} account={accountSignedIn} />} />
+          <Route path="/transaction-history" element={<TransactionHistory account={accountSignedIn} users={usersDB} />} />
         </Routes>
 
         <Footer />
