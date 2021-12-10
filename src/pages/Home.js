@@ -19,14 +19,14 @@ export default function Home() {
         <main className={style.home}>
             <header>
                 <div className={style.container}>
-                    <img className={style.bnmlogohome} src={logo} alt="bnm logo" />
+                    <img className={`${style.bnmlogohome} ${style.rotating} `} src={logo} alt="bnm logo" />
                     <span className={style.bnmwordmark}>BNM</span>
 
                     <nav>
                         <a href="#home">Home</a>
                         <a href="#about">About</a>
                         <a href="#features">Features</a>
-                        <a href="/cardselection">Credit</a>
+                        <a href="/cardselection" to="/cardselection">Credit</a>
                         <a href="/signin" className={style.signInCTA}>Sign In</a>
                     </nav>
 

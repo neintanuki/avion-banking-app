@@ -14,7 +14,7 @@ export default function NavBar({ setIsSignedIn, setAccountSignedIn, isAdmin }) {
     return (
         <div className={style.navbar}>
             <div className={style.innerNavbar}>
-                <img className="bnm-logo" src={logo} alt="bnm logo" /><span className="bnm-wordmark">BNM</span>
+                <img className="bnm-logo rotating" src={logo} alt="bnm logo" /><span className="bnm-wordmark">BNM</span>
             </div>
             
             <div className={style.navMenu}>
