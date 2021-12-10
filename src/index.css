@@ -61,7 +61,7 @@ a {
     color: white;
 }
 
-.client, .inner-client, .newclient, .transact, .transactionhistory, .signin {
+.client, .inner-client, .newclient, .transact, .transactionhistory, .signin, .transfer {
     margin-top: 50px;
     width: 50vw;
     text-align: justify;

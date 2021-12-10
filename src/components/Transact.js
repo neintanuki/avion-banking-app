@@ -1,19 +1,27 @@
 import { useState, useEffect } from 'react';
 
-function Transact({ users, onUsers, account }) {
+function Transact({ users, onUsers, account, isAdmin }) {
     const [transactionType, setTransactionType] = useState("withdraw");
     const [selectedUser, setSelectedUser] = useState('');
     const [filteredUsers, setFilteredUsers] = useState([]);
+    const [balance, setBalance] = useState(0);
     const [amount, setAmount] = useState(0);
 
     useEffect(() => {
-        if (users.length) {
+        if (users.length && isAdmin) {
           const clientUsers = users.filter(user => {
             return !user.isAdmin;
           }) 
 
           setFilteredUsers(clientUsers);
           setSelectedUser(clientUsers[0].accountNumber);
+        } else if (users.length) {
+          setSelectedUser(account);
+          users.forEach(user => {
+            if (user.accountNumber === account) {
+              setBalance(user.initialBalance);
+            }
+          })
         }
 
       }, [users])
@@ -22,7 +30,7 @@ function Transact({ users, onUsers, account }) {
         onUsers(
           users.map(user => {
             if (user.accountNumber === account) {
-                  
+
               user.transactionHistory.push({
                 action: transactionType,
                 amount,
@@ -40,7 +48,7 @@ function Transact({ users, onUsers, account }) {
         
         onUsers(
           users.map(user => {
-            if (user.accountNumber === selectedUser && !user.isAdmin) {
+            if (user.accountNumber === selectedUser) {
               
               switch (transactionType) {
                 case "withdraw":
@@ -83,23 +91,31 @@ function Transact({ users, onUsers, account }) {
                 <option value="deposit">Deposit</option>
               </select>
             </div>
+
+            { isAdmin ? 
+              <div className="form-control">
+                <h3>Select User:</h3>
+                {
+                  filteredUsers.length ?
+                  <select id="select-user" value={selectedUser} onChange={e => setSelectedUser(e.target.value)}>
+                    {
+                      filteredUsers.map(user => {
+                        return (
+                          <option key={user.accountNumber} value={user.accountNumber}>{`${user.username} ${user.accountNumber}`}</option>
+                        )
+                      })
+                    }
+                  </select> :
+                  "No Users Found"
+                }
+              </div> :
+              <div className="form-control">
+                <h3>Current Balance:</h3>
+                <input type="number" className="form-input" value={balance} disabled/>
+              </div>
+            
+            }
     
-            <div className="form-control">
-              <h3>Select User:</h3>
-              {
-                filteredUsers.length ?
-                <select id="select-user" value={selectedUser} onChange={e => setSelectedUser(e.target.value)}>
-                  {
-                    filteredUsers.map(user => {
-                      return (
-                        <option key={user.accountNumber} value={user.accountNumber}>{`${user.username} ${user.accountNumber}`}</option>
-                      )
-                    })
-                  }
-                </select> :
-                "No Users Found"
-              }
-            </div>
     
             <div className="form-control">
               <h3>Enter Amount:</h3>

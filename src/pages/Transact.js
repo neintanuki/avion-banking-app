@@ -1,8 +1,8 @@
 import TransactComponent from '../components/Transact';
 
 // TRANSACT
-export default function Transact({ users, onUsers, account }) {
+export default function Transact({ users, onUsers, account, isAdmin }) {
 
-  return <TransactComponent users={users} onUsers={onUsers} account={account} />
+  return <TransactComponent users={users} onUsers={onUsers} account={account} isAdmin={isAdmin} />
 
 }
