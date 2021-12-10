@@ -3,9 +3,16 @@ import { useEffect, useState } from "react";
 function Transfer({ users, account, onUsers }) {
     const [filteredUsers, setFilteredUsers] = useState([]);
     const [selectedUser, setSelectedUser] = useState({});
+    const [balance, setBalance] = useState(0);
     const [amount, setAmount] = useState();
 
     useEffect(() => {
+        users.forEach(user => {
+            if (user.accountNumber === account) {
+                setBalance(user.initialBalance);
+            }
+        })
+
         const clientUsers = users.filter(user => {
             return user.accountNumber !== account && !user.isAdmin
         })
@@ -28,6 +35,13 @@ function Transfer({ users, account, onUsers }) {
                     user.initialBalance += amount;
                 }
 
+                user.transactionHistory.push({
+                    action: "transfer",
+                    amount,
+                    date: new Date(),
+                    transferTo: selectedUser.username
+                })
+
                 return user;
             })
         )
@@ -49,6 +63,10 @@ function Transfer({ users, account, onUsers }) {
                             })
                         }
                     </select>
+                </div>
+                <div className="form-control">
+                    <label className="form-control">Your balance:</label>
+                    <input type="number" className="form-input" value={balance} disabled/>
                 </div>
                 <div className="form-control">
                     <label className="form-control">User balance:</label>
