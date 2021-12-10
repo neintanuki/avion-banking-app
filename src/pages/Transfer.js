@@ -38,6 +38,7 @@ function Transfer({ users, account, onUsers }) {
         <div className="component-wrapper">
             <form className="transfer" onSubmit={transfer}>
                 <h2>Transfer Funds</h2>
+            <div className="inner-transfer">
                 <div className="form-control">
                     <label className="form-label">Transfer To:</label>
                     <select value={JSON.stringify(selectedUser)} onChange={e => setSelectedUser(JSON.parse(e.target.value))}>
@@ -60,6 +61,7 @@ function Transfer({ users, account, onUsers }) {
                 </div>
 
                 <button className="btn-submit">Transfer</button>
+            </div>
             </form>
         </div>
     )

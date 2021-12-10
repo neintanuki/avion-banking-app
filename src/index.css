@@ -203,3 +203,17 @@ td {
   }
 
 /* 404 NOT FOUND ENDS HERE */
+
+/* TRANSFER STARTS HERE */
+
+.inner-transfer {
+    margin-top: 50px;
+    background-color: rgba(0, 0, 0, 0.1);  
+    backdrop-filter: blur(5px);
+    border-radius: 25px;
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-bottom: 20px;
+}
+
+/* TRANSFER ENDS HERE */
