@@ -133,3 +133,19 @@ td {
 
 
 /* TRANSACT ENDS HERE */
+
+/* TRANSACTION HISTORY STARTS HERE */
+
+.history {
+    margin-top: 50px;
+    background-color: rgba(0, 0, 0, 0.1);  
+    backdrop-filter: blur(5px);
+    border-radius: 25px;
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    width: 60vw;
+}
+
+/* TRANSACTION HISTORY ENDS HERE */

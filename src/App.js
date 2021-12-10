@@ -72,6 +72,8 @@ function App() {
 
         <Routes>
           <Route path="/" element={<Dashboard />} />
+          <Route path="/transact" element={<Transact users={usersDB} onUsers={setUsersDB} account={accountSignedIn} />} />
+          <Route path="/transaction-history" element={<TransactionHistory account={accountSignedIn} users={usersDB} />} />
         </Routes>
 
         <Footer />
