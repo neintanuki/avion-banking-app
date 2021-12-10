@@ -53,7 +53,7 @@ function App() {
   return (
     <div className="app">
 
-      <PrivateRoutes isSignedIn={isSignedIn} userShouldSignIn={true}>
+      <PrivateRoutes isSignedIn={isSignedIn} userShouldSignIn={true} isAdmin={true} accountSignedIn={accountSignedIn} users={usersDB}>
         <NavBar />
 
         <Routes>
