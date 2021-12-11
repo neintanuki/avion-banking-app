@@ -128,6 +128,7 @@ td {
     padding-left: 80px;
     padding-right: 80px;
     padding-bottom: 20px;
+    padding-top: 20px;
 }
 
 
@@ -215,6 +216,7 @@ td {
     padding-left: 80px;
     padding-right: 80px;
     padding-bottom: 20px;
+    padding-top: 20px;
 }
 
 /* TRANSFER ENDS HERE */
@@ -379,3 +381,18 @@ img {
 }
 
 /* CARD SELECTION ENDS HERE */
+
+/* ACCOUNT INFO STARTS HERE */
+
+.accountinfo-wrapper {
+    margin-top: 50px;
+    background-color: rgba(0, 0, 0, 0.1);  
+    backdrop-filter: blur(5px);
+    border-radius: 25px;
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+/* ACCOUNT INFO ENDS HERE */

@@ -22,26 +22,28 @@ function AccountInfo({ users, account }) {
     return (
         <div className="component-wrapper">
             <div className="account-info">
-                <h3>Account Information</h3>
-                <div className="form-control">
-                    <label className="form-label">Account Number</label>
-                    <input type="text" className="form-input" value={accountNumber} disabled/>
-                </div>
-                <div className="form-control">
-                    <label className="form-label">Balance</label>
-                    <input type="text" className="form-input" value={initialBalance} disabled/>
-                </div>
-                <div className="form-control">
-                    <label className="form-label">Username</label>
-                    <input type="text" className="form-input" value={username} disabled/>
-                </div>
-                <div className="form-control">
-                    <label className="form-label">First Name</label>
-                    <input type="text" className="form-input" value={firstName} disabled/>
-                </div>
-                <div className="form-control">
-                    <label className="form-label">Last Name</label>
-                    <input type="text" className="form-input" value={lastName} disabled/>
+                <h2>Account Information</h2>
+                <div className="accountinfo-wrapper">
+                    <div className="form-control">
+                        <label className="form-label">Account Number</label>
+                        <input type="text" className="form-input" value={accountNumber} disabled/>
+                    </div>
+                    <div className="form-control">
+                        <label className="form-label">Balance</label>
+                        <input type="text" className="form-input" value={initialBalance} disabled/>
+                    </div>
+                    <div className="form-control">
+                        <label className="form-label">Username</label>
+                        <input type="text" className="form-input" value={username} disabled/>
+                    </div>
+                    <div className="form-control">
+                        <label className="form-label">First Name</label>
+                        <input type="text" className="form-input" value={firstName} disabled/>
+                    </div>
+                    <div className="form-control">
+                        <label className="form-label">Last Name</label>
+                        <input type="text" className="form-input" value={lastName} disabled/>
+                    </div>
                 </div>
             </div>
         </div>
