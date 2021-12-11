@@ -218,3 +218,164 @@ td {
 }
 
 /* TRANSFER ENDS HERE */
+
+/* CARD SELECTION STARTS HERE */
+
+.card-wrapper {
+    height: 50vh;
+    overflow: hidden;
+}
+
+.innercard-wrapper {
+    display: flex;
+    margin: 10px;
+}
+
+.innerblackcard-wrapper {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.black {
+    background-color: rgba(0, 0, 0, 0.185);
+    height: 100vh;
+}
+
+.black-card {
+    height: 30vh;
+}
+
+.blackcard-wrapper {
+    display: flex;
+}
+
+.blackcard-title {
+    color: black;
+    font-size: 40px;
+    padding-bottom: 50px;
+    font-weight: 600;
+}
+
+.black-platinum {
+    color: rgb(255, 255, 255);
+}
+
+.btn-black {
+    border: hidden;
+    background-color: transparent;
+    color: black;
+    padding-bottom: 50px;
+    font-size: 14px;
+}
+
+.cx-secure {
+    color: blue;
+}
+
+.btn-black:hover, .btn-blue:hover, .btn-green:hover {
+    text-decoration: underline;
+    color: blue;
+}
+
+img {
+    margin: 5px;
+}
+
+.blue {
+    background-color: rgba(0,0,255,.05);
+    width: 50vw;
+    margin-right: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.blue-card, .green-card {
+    width: 20vw;
+}
+
+.blue-titlecard {
+    color: blue;
+}
+
+.blue-subject {
+    padding-bottom: 20px;
+}
+
+.btn-blue, .btn-green {
+    padding-top: 25px;
+    border: hidden;
+    background-color: transparent;
+    color: black;
+    font-size: 14px;
+}
+
+.green {
+    background-color: rgba(0,255,0,.05);
+    width: 50vw;
+    margin-left: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.green-card {
+    width: 20vw;
+}
+
+.green-wraper {
+    width: 50vw;
+    padding-left: 25px;
+}
+
+.green-wraper1 {
+    width: 50vw;
+    padding-left: 80px;
+}
+
+.green-titlecard {
+    color: green;
+}
+
+.red {
+    width: 50vw;
+    margin-left: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.red-card {
+    width: 70%;
+}
+
+.white {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.underlined {
+    text-decoration: underline;
+}
+
+.yellow {
+    /* background-color: rgba(255,255,0,.1); */
+    width: 50vw;
+    margin-right: 5px;
+}
+
+
+.navcredit {
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(50px);
+}
+
+/* CARD SELECTION ENDS HERE */

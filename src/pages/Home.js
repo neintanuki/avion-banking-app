@@ -10,7 +10,7 @@ import ui from '../assets/ui.svg';
 import onlineBanking from '../assets/online-banking.svg';
 
 import logo from "../assets/bnmlogo.svg";
-import CardSelection from '../components/CardSelection';
+import CardSelection from '../components/FCardSelection';
 import { NavLink } from 'react-router-dom';
 import { Nav } from "react-bootstrap";
 
@@ -23,7 +23,7 @@ export default function Home() {
                     <span className={style.bnmwordmark}>BNM</span>
 
                     <nav>
-                        <a href="#home">Home</a>
+                        <a href="/">Home</a>
                         <a href="#about">About</a>
                         <a href="#features">Features</a>
                         <a href="/cardselection" to="/cardselection">Credit</a>

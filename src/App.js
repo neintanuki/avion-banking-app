@@ -18,6 +18,7 @@ import AccountInfo from "./pages/AccountInfo";
 import NotFound from "./pages/NotFound"
 
 import { useState } from 'react';
+import CardSelection from "./components/FCardSelection";
 
 function App() {
   const [isSignedIn, setIsSignedIn] = useState(false);
@@ -88,7 +89,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           { !isSignedIn && <Route path="/signin" element={<SignIn setIsSignedIn={setIsSignedIn} onAccountSignedIn={setAccountSignedIn}/>} />}
-
+          <Route path="/cardselection" element={<CardSelection />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </PrivateRoutes>
