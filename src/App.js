@@ -14,6 +14,7 @@ import NewClient from "./pages/NewClient";
 import Transact from "./pages/Transact";
 import Transfer from "./pages/Transfer";
 import TransactionHistory from "./pages/TransactionHistory";
+import AccountInfo from "./pages/AccountInfo";
 import NotFound from "./pages/NotFound"
 
 import { useState } from 'react';
@@ -61,7 +62,7 @@ function App() {
           <Route path="/" element={<Dashboard />} />
           <Route path="/client" element={<Client users={usersDB} />} />
           <Route path="/new-client" element={<NewClient isSignedIn={isSignedIn} users={usersDB} onUsers={setUsersDB} />} />
-          <Route path="/transact" element={<Transact users={usersDB} onUsers={setUsersDB} account={accountSignedIn} />} />
+          <Route path="/transact" element={<Transact users={usersDB} onUsers={setUsersDB} account={accountSignedIn} isAdmin={true} />} />
           <Route path="/transaction-history" element={<TransactionHistory account={accountSignedIn} users={usersDB} />} />
         </Routes>
 
@@ -73,8 +74,9 @@ function App() {
 
         <Routes>
           <Route path="/" element={<Dashboard />} />
+          <Route path="/my-account" element={<AccountInfo users={usersDB} account={accountSignedIn} />} />          
           <Route path="/transfer" element={<Transfer users={usersDB} account={accountSignedIn} onUsers={setUsersDB} />} />
-          <Route path="/transact" element={<Transact users={usersDB} onUsers={setUsersDB} account={accountSignedIn} />} />
+          <Route path="/transact" element={<Transact users={usersDB} onUsers={setUsersDB} account={accountSignedIn} isAdmin={false} />} />
           <Route path="/transaction-history" element={<TransactionHistory account={accountSignedIn} users={usersDB} />} />
         </Routes>
 

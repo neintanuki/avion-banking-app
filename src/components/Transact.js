@@ -52,7 +52,7 @@ function Transact({ users, onUsers, account, isAdmin }) {
               
               switch (transactionType) {
                 case "withdraw":
-                  if (user.initialBalance > amount) {
+                  if (user.initialBalance >= amount) {
                     user.initialBalance -= amount;
                     saveTransactionHistory();
 
