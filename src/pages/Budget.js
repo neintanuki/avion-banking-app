@@ -13,7 +13,7 @@ const Budget = () => {
         <div className="container">
             <div className="app-wrapper">
                 <div className="header">
-                    <h1>Budget</h1>
+                    <h1>Budget Tracker</h1>
                 </div>
                 <Balance />
                 <AddTransact />
